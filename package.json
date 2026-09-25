@@ -2,16 +2,33 @@
   "name": "myportfolio",
   "version": "0.1.0",
   "private": true,
-  "engines": {
-    "node": ">=18"
-  },
   "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "preview": "npx serve out -l 3010",
+    "lint": "next lint",
     "validate:frontmatter": "node ./scripts/validate-frontmatter.js",
     "lhci:autorun": "lhci autorun --config=./lighthouseci/lhci.yml"
   },
+  "dependencies": {
+    "lucide-react": "^1.39.0",
+    "next": "14.2.15",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
   "devDependencies": {
-    "@lhci/cli": "^0.10.2",
+    "@lhci/cli": "^0.15.1",
+    "@types/node": "^20.14.12",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "14.2.15",
     "gray-matter": "^4.0.3",
+    "typescript": "^5.5.4",
     "yaml": "^2.3.1"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }

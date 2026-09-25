@@ -1,5 +1,5 @@
 ---
-title: JJ Granados Technical Portfolio Design
+title: June Jovi Granados Technical Portfolio Design
 created: 2026-09-01
 updated: 2026-09-01
 status: approved

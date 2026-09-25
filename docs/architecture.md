@@ -1,11 +1,11 @@
 ---
-title: JJ Granados Technical Portfolio Architecture
+title: June Jovi Granados Technical Portfolio Architecture
 created: 2026-09-01
 updated: 2026-09-01
 status: approved
 ---
 
-# Architecture: JJ Granados Technical Portfolio
+# Architecture: June Jovi Granados Technical Portfolio
 
 ## Architecture Summary
 Static-first, content-driven web application.

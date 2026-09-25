@@ -1,17 +1,17 @@
 ---
-title: JJ Granados Technical Portfolio
-created: 2026-09-01
-updated: 2026-09-01
+title: June Jovi Granados Technical Portfolio
+created: 2026-09-02
+updated: 2026-09-02
 status: approved
 ---
 
-# Product Brief: JJ Granados Technical Portfolio
+# Product Brief: June Jovi Granados Technical Portfolio
 
 ## Vision
-A premium technical portfolio demonstrating JJ Granados' ability to solve difficult engineering problems through real mobile, cross-platform, legacy-modernization, migration, and maintenance work.
+A premium technical portfolio demonstrating June Jovi Granados' ability to solve difficult engineering problems through high-concurrency systems, legacy modernization, platform migration, and reusable library design.
 
-Primary goal: career growth.
-Secondary goals: personal brand and future consulting credibility.
+Primary goal: Tier-one tech career growth.
+Secondary goals: Personal brand and future consulting credibility.
 
 ## Positioning
 **Senior Software Engineer — Mobile & Cross-Platform**
@@ -20,24 +20,23 @@ Secondary goals: personal brand and future consulting credibility.
 
 Brand promise:
 
-> This is someone who can solve difficult engineering problems.
+> This is someone who can solve difficult engineering problems at enterprise scale.
 
 Architecture is presented as an engineering capability, not as the user's professional title.
 
 ## Audiences
 1. Recruiters / hiring teams
-2. Engineering managers / technical leads
+2. Engineering managers / Staff and Principal Engineers
 3. Potential technical consulting clients
 
 ## Selected Engineering Work
-1. GCash — Architecture Modernization
-2. Xamarin to .NET MAUI — Platform Migration
-3. Damstra Learn — Legacy Modernization
-4. Tara Tsek — Reusable Engineering / Library Design
+1. GCash — Architecture Modernization (Super-app scale, 100M+ installs, high concurrency)
+2. Xamarin to .NET MAUI — Platform Migration (Enterprise legacy mitigation)
+3. Damstra Learn — Legacy Modernization (Tech-debt cleanup, state management)
+4. Tara Tsek — Reusable Engineering / Library Design (API design, modularity)
 
 ## Independent Projects
-Archived: TaxPH, TrainsPH
-Current/planned: TaxPH 2.0, Pet Records, Politician Records
+Highlight high-complexity deployed projects focusing on real-world utility: TaxPH 2.0, Pet Records, Politician Records. Omit deprecated applications.
 
 ## V1 Scope
 - Responsive homepage
@@ -45,17 +44,17 @@ Current/planned: TaxPH 2.0, Pet Records, Politician Records
 - Experience timeline
 - Engineering approach
 - Toolbox
-- AI-assisted engineering section
+- Developer Velocity (AI-assisted workflows)
 - Contact and résumé links
 - SEO, accessibility and analytics
 
 Out of scope: database, CMS, authentication, admin dashboard, booking system, custom backend.
 
 ## Content Principle
-Problem → Investigation → Decision → Implementation → Validation → Result
+Problem → Investigation → Decision → Execution → Scale/Impact
 
 ## Constraints
-Never invent employment history, metrics, certifications, testimonials, awards, outcomes or unsupported expertise.
+Never invent employment history, metrics, certifications, testimonials, awards, outcomes or unsupported expertise. Ensure all architectural claims align with measurable business impacts.
 
 ## North Star
 > Show, don't claim.

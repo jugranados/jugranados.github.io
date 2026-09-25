@@ -1,5 +1,5 @@
 ---
-title: JJ Granados Technical Portfolio Implementation Plan
+title: June Jovi Granados Technical Portfolio Implementation Plan
 created: 2026-09-01
 updated: 2026-09-01
 status: planning-ready
