@@ -11,35 +11,60 @@ const profile = {
 const workItems = [
   {
     title: 'GCash — Architecture Modernization',
-    role: 'Lead Mobile Engineer',
+    role: 'Lead Mobile Architect',
     description:
-      'Built and supported mobile-first experiences with attention to reliability, maintainability, and platform consistency in a demanding business context.',
-    accent: 'Legacy UI → Modern Core → Clean API',
+      "Restructured legacy architecture for one of Southeast Asia's largest fintech platforms. Optimized state management, module compilation boundaries, and localized data persistence strategies to increase development velocity and baseline reliability.",
+    diagram: 'architecture',
   },
   {
     title: 'Xamarin to .NET MAUI — Platform Migration',
-    role: 'Lead cross-platform migration',
+    role: 'Principal Migrations Consultant',
     description:
-      'Works across Android, iOS, React Native, and .NET MAUI to balance feature velocity with long-term technical health.',
-    accent: 'Old stack → .NET MAUI',
+      'Led cross-platform migration from deprecated Xamarin framework to .NET MAUI. Redesigned layout systems, decoupled custom rendering abstractions, and streamlined target multi-platform pipeline integrations with negligible service disruption.',
+    diagram: 'migration',
   },
   {
     title: 'Damstra Learn — Legacy Modernization',
-    role: 'Modernization & engineering',
+    role: 'Senior Mobile Engineer',
     description:
-      'Applies practical engineering discipline to improve delivery flow, reduce platform friction, and make complex product work easier to evolve.',
-    accent: 'Legacy → API → App',
+      'Modernized aging enterprise learning platform with improved architecture. Replaced heavy local webview components with performant native abstractions, resolving memory leak vectors and performance issues.',
+    diagram: 'legacy',
   },
   {
-    title: 'Tara Tsek — Reusable Engineering | Library Design',
-    role: 'Design system & reusable components',
+    title: 'Tara Tsek — Reusable Engineering / Library Design',
+    role: 'Core Library Architect',
     description:
-      'Bridges product needs, code implementation, and iterative improvement so mobile experiences stay useful and dependable over time.',
-    accent: 'App layer → Shared UI',
+      'Designed shared component libraries for cross-project reuse. Established comprehensive interface specifications, abstract wrapper patterns, and structured internal distribution pipelines across multiple internal utility projects.',
+    diagram: 'library',
   },
 ];
 
-const approachStages = ['Understand', 'Investigate', 'Plan', 'Build', 'Validate', 'Improve'];
+const approachStages = [
+  {
+    title: 'Problem',
+    description: 'Isolate the actual system bottleneck or platform constraint.',
+  },
+  {
+    title: 'Investigation',
+    description: 'Profile resource consumption, trace stack calls, audit dependencies.',
+  },
+  {
+    title: 'Decision',
+    description: 'Draft engineering specifications comparing trade-offs explicitly.',
+  },
+  {
+    title: 'Implementation',
+    description: 'Write clean, modular, and thoroughly isolated code blocks.',
+  },
+  {
+    title: 'Validation',
+    description: 'Apply unit, integration, and target-environment profiling tests.',
+  },
+  {
+    title: 'Result',
+    description: 'Deploy resilient, performant, and future-proof systems.',
+  },
+];
 
 const toolbox = {
   Mobile: ['Android', 'iOS', 'React Native', '.NET MAUI'],
@@ -124,7 +149,7 @@ export default function HomePage() {
             <div className="pill-panel">
               <p className="mini-label">Core Stack</p>
               <div className="pill-wrap">
-                {['Android', 'iOS', 'React Native', '.NET MAUI'].map((item) => (
+                {['Android', 'iOS', 'React Native', '.NET MAUI', 'React.js', 'Next.js'].map((item) => (
                   <span key={item} className="pill">
                     {item}
                   </span>
@@ -152,18 +177,54 @@ export default function HomePage() {
         </section>
 
         <section id="work" className="section-card">
-          <SectionHeading eyebrow="Selected Engineering Work" title="Built for scale, modernization and platform clarity." />
+          <SectionHeading eyebrow="Selected Work" title="Selected Engineering Work" />
           <div className="work-grid">
             {workItems.map((item) => (
               <article key={item.title} className="work-card">
-                <div className="card-visual">
-                  <div className="diagram-bar">
-                    {item.accent.split('→').map((part, idx, arr) => (
-                      <span key={`${item.title}-${part}`}>
-                        {part.trim()}
-                        {idx < arr.length - 1 && <span className="arrow">→</span>}
-                      </span>
-                    ))}
+                <div className="card-visual" aria-hidden="true">
+                  <div className={`project-diagram project-diagram--${item.diagram}`}>
+                    {item.diagram === 'architecture' && (
+                      <>
+                        <span className="diagram-node">Legacy UI</span>
+                        <span className="diagram-arrow">→</span>
+                        <span className="diagram-node diagram-node--accent">Modern Core</span>
+                        <span className="diagram-arrow">→</span>
+                        <span className="diagram-node">Clean API</span>
+                      </>
+                    )}
+                    {item.diagram === 'migration' && (
+                      <div className="diagram-migration">
+                        <div className="diagram-version">
+                          <span className="diagram-label">Before</span>
+                          <span className="diagram-node">Xamarin</span>
+                        </div>
+                        <span className="diagram-refresh" aria-hidden="true">⟳</span>
+                        <div className="diagram-version">
+                          <span className="diagram-label diagram-label--accent">After</span>
+                          <span className="diagram-node diagram-node--accent">.NET MAUI</span>
+                        </div>
+                      </div>
+                    )}
+                    {item.diagram === 'legacy' && (
+                      <>
+                        <span className="diagram-node diagram-node--monolith">Monolith</span>
+                        <span className="diagram-arrow">→</span>
+                        <div className="diagram-modules">
+                          <span className="diagram-node diagram-node--accent">Mod 1</span>
+                          <span className="diagram-node diagram-node--accent">Mod 2</span>
+                        </div>
+                      </>
+                    )}
+                    {item.diagram === 'library' && (
+                      <>
+                        <div className="diagram-projects">
+                          <span>App Project A</span>
+                          <span>App Project B</span>
+                        </div>
+                        <span className="diagram-link" aria-hidden="true">↗</span>
+                        <span className="diagram-node diagram-node--accent">Shared Library</span>
+                      </>
+                    )}
                   </div>
                 </div>
                 <div className="card-copy">
@@ -171,26 +232,27 @@ export default function HomePage() {
                   <p className="meta">{item.role}</p>
                   <p>{item.description}</p>
                 </div>
-                {/* Case study links will be restored when individual project pages are ready. */}
+                <span className="case-study-label">Read case study →</span>
               </article>
             ))}
           </div>
         </section>
 
         <section id="approach" className="section-card">
-          <SectionHeading eyebrow="Approach // 01" title="How I Work" />
+          <SectionHeading eyebrow="Approach" title="How I Work" />
           <div className="stage-grid">
             {approachStages.map((stage, index) => (
-              <div key={stage} className="stage-card">
+              <article key={stage.title} className="stage-card">
                 <span className="stage-index">0{index + 1}</span>
-                <h3>{stage}</h3>
-              </div>
+                <h3>{stage.title}</h3>
+                <p>{stage.description}</p>
+              </article>
             ))}
           </div>
         </section>
 
         <section className="section-card">
-          <SectionHeading eyebrow="Career // 02" title="The Path So Far" />
+          <SectionHeading eyebrow="Career" title="The Path So Far" />
           <div className="story-grid">
             <div>
               <p>
