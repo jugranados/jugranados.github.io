@@ -404,11 +404,6 @@ button:focus-visible {
   color: var(--accent);
 }
 
-.diagram-refresh {
-  font-size: 22px;
-  line-height: 1;
-}
-
 .diagram-node--monolith {
   position: relative;
   min-height: 38px;
@@ -457,8 +452,6 @@ button:focus-visible {
 
 .diagram-arrow {
   color: var(--accent);
-  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
-  font-size: 14px;
 }
 
 .card-copy {

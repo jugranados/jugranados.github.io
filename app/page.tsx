@@ -186,9 +186,9 @@ export default function HomePage() {
                     {item.diagram === 'architecture' && (
                       <>
                         <span className="diagram-node">Legacy UI</span>
-                        <span className="diagram-arrow">→</span>
+                        <ArrowRight className="diagram-arrow" size={14} strokeWidth={2.5} aria-hidden="true" />
                         <span className="diagram-node diagram-node--accent">Modern Core</span>
-                        <span className="diagram-arrow">→</span>
+                        <ArrowRight className="diagram-arrow" size={14} strokeWidth={2.5} aria-hidden="true" />
                         <span className="diagram-node">Clean API</span>
                       </>
                     )}
@@ -198,7 +198,7 @@ export default function HomePage() {
                           <span className="diagram-label">Before</span>
                           <span className="diagram-node">Xamarin</span>
                         </div>
-                        <span className="diagram-refresh" aria-hidden="true">⟳</span>
+                        <RefreshCw className="diagram-refresh" size={22} strokeWidth={2} aria-hidden="true" />
                         <div className="diagram-version">
                           <span className="diagram-label diagram-label--accent">After</span>
                           <span className="diagram-node diagram-node--accent">.NET MAUI</span>
@@ -208,7 +208,7 @@ export default function HomePage() {
                     {item.diagram === 'legacy' && (
                       <>
                         <span className="diagram-node diagram-node--monolith">Monolith</span>
-                        <span className="diagram-arrow">→</span>
+                        <ArrowRight className="diagram-arrow" size={14} strokeWidth={2.5} aria-hidden="true" />
                         <div className="diagram-modules">
                           <span className="diagram-node diagram-node--accent">Mod 1</span>
                           <span className="diagram-node diagram-node--accent">Mod 2</span>
@@ -221,7 +221,7 @@ export default function HomePage() {
                           <span>App Project A</span>
                           <span>App Project B</span>
                         </div>
-                        <span className="diagram-link" aria-hidden="true">↗</span>
+                        <Link2 className="diagram-link" size={18} strokeWidth={2} aria-hidden="true" />
                         <span className="diagram-node diagram-node--accent">Shared Library</span>
                       </>
                     )}
@@ -232,7 +232,10 @@ export default function HomePage() {
                   <p className="meta">{item.role}</p>
                   <p>{item.description}</p>
                 </div>
-                <span className="case-study-label">Read case study →</span>
+                <span className="case-study-label">
+                  <span>Read case study</span>
+                  <ArrowRight size={13} strokeWidth={2.5} aria-hidden="true" />
+                </span>
               </article>
             ))}
           </div>
@@ -310,6 +313,7 @@ export default function HomePage() {
                   <h3>{item.title}</h3>
                   <p>{item.summary}</p>
                 </div>
+                <ArrowRight className="experience-row-icon" size={12} strokeWidth={2.5} aria-hidden="true" />
               </div>
             ))}
           </div>
@@ -342,9 +346,12 @@ export default function HomePage() {
 }
 import {
   AlertTriangle,
+  ArrowRight,
   ArrowUpRight,
   CheckCircle2,
   Cpu,
+  Link2,
+  RefreshCw,
   Search,
   UserRound,
 } from 'lucide-react';
