@@ -130,11 +130,22 @@ const experienceItems = [
 ];
 
 const aiExamples = [
-  'Code review and architecture sanity checks',
-  'Debugging support and issue triage',
-  'API and integration validation',
-  'Documentation, research and decision briefs',
-  'Delivery acceleration with repeatable workflows',
+  {
+    title: 'Code Generation',
+    description: 'Accelerating clean boilerplate structure setup.',
+  },
+  {
+    title: 'Refactoring Assistance',
+    description: 'Investigating optimization vectors for legacy code.',
+  },
+  {
+    title: 'Documentation',
+    description: 'Drafting robust architecture spec sheets.',
+  },
+  {
+    title: 'Testing Scaffolds',
+    description: 'Creating complex unit-test matrices.',
+  },
 ];
 
 const processSteps = [
@@ -362,27 +373,66 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section id="ai" className="section-card">
-          <SectionHeading eyebrow="Engineering With AI" title="Practical AI support for delivery velocity and quality." />
-          <ul className="ai-list">
-            {aiExamples.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
+        <section id="ai" className="section-card ai-section">
+          <SectionHeading eyebrow="AI + Engineering // 08" title="Engineering With AI" />
+          <div className="ai-layout">
+            <div className="ai-intro">
+              <p>
+                I treat artificial intelligence as a robust capability multiplier rather than a developer replacement. By adopting LLM-assisted workflows, I accelerate boilerplate scaffolding, speed up root-cause diagnostics, and generate technical documentation templates.
+              </p>
+              <p>
+                The priority always remains deterministic software architecture, rigorous manual review, and standard-compliant library integration.
+              </p>
+            </div>
+            <ul className="ai-cards">
+              {aiExamples.map((item) => (
+                <li key={item.title}>
+                  <article className="ai-card">
+                    <span className="ai-card-icon" aria-hidden="true">
+                      <Zap size={18} strokeWidth={2.5} />
+                    </span>
+                    <div>
+                      <h3>{item.title}</h3>
+                      <p>{item.description}</p>
+                    </div>
+                  </article>
+                </li>
+              ))}
+            </ul>
+          </div>
         </section>
 
         <section id="contact" className="section-card contact-card">
-          <SectionHeading eyebrow="Let’s Work Together" title="Open to mobile engineering and product-focused platform opportunities." />
-          <div className="contact-row">
-            <a href="https://www.linkedin.com/in/jjsgranados/" target="_blank" rel="noreferrer"><UserRound size={15} /> LinkedIn</a>
-            <a href="/resume">Résumé <ArrowUpRight size={15} /></a>
-            <span>{profile.location}</span>
+          <SectionHeading eyebrow="Contact // 09" title="Let’s Work Together" />
+          <p className="contact-intro">
+            Open to senior mobile engineering roles and technical consulting opportunities. Let’s build stable systems.
+          </p>
+          <div className="contact-links">
+            <a href="mailto:hello@jjgranados.dev">
+              <Mail size={18} aria-hidden="true" />
+              hello@jjgranados.dev
+            </a>
+            <a href="https://www.linkedin.com/in/jjsgranados/" target="_blank" rel="noreferrer">
+              linkedin.com/in/jjsgranados
+            </a>
           </div>
+          <a className="button primary contact-resume" href="/resume">
+            View Résumé <ArrowUpRight size={16} aria-hidden="true" />
+          </a>
         </section>
       </main>
 
       <footer className="site-footer">
-        <p>© 2026 {profile.name}</p>
+        <div className="footer-identity">
+          <strong>{profile.name}</strong>
+          <span>Mobile engineer. Software builder. Problem solver.</span>
+        </div>
+        <nav className="footer-links" aria-label="Footer">
+          <a href="https://github.com/bobijovz" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/jjsgranados/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="mailto:hello@jjgranados.dev">Email</a>
+          <span className="footer-year">2026</span>
+        </nav>
       </footer>
     </div>
   );
@@ -395,8 +445,9 @@ import {
   Cpu,
   ExternalLink,
   Link2,
+  Mail,
   RefreshCw,
   Search,
-  UserRound,
+  Zap,
 } from 'lucide-react';
 import { Fragment } from 'react';

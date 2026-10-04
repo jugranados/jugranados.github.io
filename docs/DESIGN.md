@@ -22,6 +22,8 @@ Hero copy: "SENIOR SOFTWARE ENGINEER" / "Mobile & Cross-Platform"; CTAs "Explore
 - **Career story:** approx. 2014 Systems Engineer → Android → native mobile → cross-platform → migration/modernization → Senior Software Engineer / AI-assisted development. Do not invent exact years.
 - **Independent projects:** show Archived, In Development and Planned states separately and label them.
 - **Toolbox:** groups Mobile, Languages, Frontend, Backend/Data, Engineering, AI, Exploring. Display items as wrapped chips in an auto-fitting card grid. No proficiency percentages.
+- **Engineering with AI:** section heading above a two-column layout, with workflow context beside a vertical stack of capability cards; stack the columns on mobile.
+- **Contact and footer:** full-width centered contact panel with email, LinkedIn, and résumé links, followed by a full-width footer with identity and GitHub/LinkedIn/email links. Stack footer content on narrow screens.
 - **Case study page (planned):** top summary (Project / Role / Technology / Category / Result), then Overview → Problem → Context → Constraints → Investigation → Approach → Technical Decisions → Implementation → Validation → Result → Lessons Learned. Prefer before/after and architecture diagrams, migration flows, mobile screenshots, useful code fragments. If a metric is unknown, use bounded qualitative language.
 
 ## Motion, responsive, accessibility

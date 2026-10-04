@@ -725,15 +725,6 @@ button:focus-visible {
   line-height: 1.4;
 }
 
-.ai-list {
-  display: grid;
-  gap: 5px;
-  margin: 0;
-  padding-left: 16px;
-  color: var(--muted);
-  font-size: 0.66rem;
-}
-
 .experience-row {
   grid-template-columns: 145px 1fr 55px;
 }
@@ -745,37 +736,210 @@ button:focus-visible {
   font-size: 0.58rem;
 }
 
+.ai-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.9fr);
+  align-items: start;
+  gap: 64px;
+}
+
+.ai-intro {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.ai-intro p {
+  margin: 0 0 18px;
+}
+
+.ai-intro p:last-child {
+  margin-bottom: 0;
+}
+
 .ai-list {
+  display: grid;
+  gap: 5px;
   max-width: 620px;
+  margin: 0;
+  padding-left: 16px;
+  color: var(--muted);
+  font-size: 0.66rem;
+}
+
+.ai-cards {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ai-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 74px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.ai-card-icon {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  flex: none;
+  place-items: center;
+  border-radius: 6px;
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.ai-card h3 {
+  margin: 0 0 2px;
+  color: var(--text);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.ai-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+@media (max-width: 800px) {
+  .ai-layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ai-card {
+    align-items: flex-start;
+  }
 }
 
 .contact-card {
   margin-top: 0;
-  padding: 120px 0;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  padding: 120px max(24px, calc((100vw - var(--content)) / 2));
   border-top: 1px solid var(--line);
   background: var(--surface);
   text-align: center;
 }
 
-.contact-row {
+.contact-card .section-heading {
+  margin-bottom: 20px;
+}
+
+.contact-card .section-heading h2,
+.contact-page-card .section-heading h1 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+.contact-page-card .section-heading h1 {
+  margin: 8px 0 0;
+  font-family: var(--display-font);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.045em;
+}
+
+.contact-intro {
+  max-width: 620px;
+  margin: 0 auto;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.contact-links {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 18px;
-  color: var(--muted);
-  font-size: 0.62rem;
+  gap: 24px;
+  margin: 40px 0;
 }
 
-.contact-row a {
+.contact-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text);
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+  font-size: 14px;
+}
+
+.contact-links a svg {
   color: var(--accent);
+}
+
+.contact-resume {
+  gap: 8px;
 }
 
 .site-footer {
   display: flex;
+  width: 100vw;
+  align-items: center;
   justify-content: space-between;
-  padding: 48px 0;
+  gap: 32px;
+  margin-left: calc(50% - 50vw);
+  padding: 48px max(24px, calc((100vw - var(--content)) / 2));
+  border-top: 1px solid var(--line);
+  background: var(--bg);
   color: var(--muted);
-  font-size: 0.58rem;
+  font-size: 14px;
+}
+
+.footer-identity {
+  display: grid;
+  gap: 6px;
+}
+
+.footer-identity strong {
+  color: var(--text);
+  font-family: var(--display-font);
+  font-size: 16px;
+}
+
+.footer-identity span,
+.footer-links {
+  font-size: 13px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 32px;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+}
+
+.footer-links a:hover {
+  color: var(--text);
+}
+
+.footer-year {
+  padding-left: 32px;
+  border-left: 1px solid var(--line);
+}
+
+@media (max-width: 800px) {
+  .contact-card {
+    padding: 88px 18px;
+  }
+
+  .site-footer {
+    padding: 36px 18px;
+  }
 }
 
 @media (max-width: 1100px) {
@@ -929,7 +1093,17 @@ button:focus-visible {
   }
 
   .site-footer {
-    display: block;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .footer-links {
+    gap: 18px;
+  }
+
+  .footer-year {
+    padding-left: 18px;
   }
 }
 
