@@ -66,6 +66,42 @@ const approachStages = [
   },
 ];
 
+const independentProjects = [
+  {
+    name: 'TaxPH 2.0',
+    status: 'current',
+    label: 'Current',
+    description:
+      'Modernized tax computation engine for Philippine taxpayers. Features offline calculations, dynamic bracket updates, and interactive breakdown graphs.',
+  },
+  {
+    name: 'Pet Records',
+    status: 'planned',
+    label: 'Planned',
+    description:
+      'A robust pet health and record management application utilizing local-first sync systems and granular vaccination schedulers.',
+  },
+  {
+    name: 'Politician Records',
+    status: 'planned',
+    label: 'Planned',
+    description:
+      'Public accountability tracker aimed at cataloging voting histories, project sponsorships, and municipal budget allocations.',
+  },
+  {
+    name: 'TaxPH (V1)',
+    status: 'archived',
+    label: 'Archived',
+    description: 'The original tax computation tool for local taxpayers, now preserved in an archival status.',
+  },
+  {
+    name: 'TrainsPH',
+    status: 'archived',
+    label: 'Archived',
+    description: 'A simple scheduling application for regional train lines across Manila, retired due to api endpoint deprecations.',
+  },
+];
+
 const toolbox = {
   Mobile: ['Android', 'iOS', 'React Native', '.NET MAUI'],
   Languages: ['Kotlin', 'Swift', 'TypeScript', 'C#', 'Java'],
@@ -277,12 +313,19 @@ export default function HomePage() {
         </section>
 
         <section className="section-card">
-          <SectionHeading eyebrow="Things I’ve Built" title="Independent products and practical engineering artifacts." />
-          <div className="mini-grid">
-            {['TaxPH 2.0', 'Pet Records', 'Automation tooling', 'Mobile prototypes'].map((project) => (
-              <div key={project} className="mini-card">
-                <span>{project}</span>
-              </div>
+          <SectionHeading eyebrow="Independent Projects // 05" title="Things I've Built" />
+          <div className="project-list">
+            {independentProjects.map((project) => (
+              <article key={project.name} className={`project-row project-row--${project.status}`}>
+                <div className="project-row-copy">
+                  <div className="project-row-head">
+                    <h3>{project.name}</h3>
+                    <span className={`status-badge status-badge--${project.status}`}>{project.label}</span>
+                  </div>
+                  <p>{project.description}</p>
+                </div>
+                <ExternalLink className="project-row-icon" size={20} strokeWidth={2} aria-hidden="true" />
+              </article>
             ))}
           </div>
         </section>
@@ -350,6 +393,7 @@ import {
   ArrowUpRight,
   CheckCircle2,
   Cpu,
+  ExternalLink,
   Link2,
   RefreshCw,
   Search,

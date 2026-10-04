@@ -1,87 +1,30 @@
----
-title: June Jovi Granados Technical Portfolio Design
-created: 2026-09-01
-updated: 2026-09-01
-status: approved
----
+# Design and UX
 
-# Design
+Source of truth for tokens and styles is `app/globals.css` (`:root` variables). This file records intent and rules, not values.
 
 ## Direction
-**Premium Technical + Technical Workspace**
+"Premium technical + technical workspace": editorial typography with restrained engineering-system details. Near-black background, slightly lighter surfaces, off-white text, muted gray secondary text, one electric-blue accent, thin borders, subtle technical grid, generous whitespace. Sans-serif for body/headings, monospace for technical labels, metadata and numbers.
 
-The visual identity combines premium editorial typography with restrained engineering-system details.
+Avoid: neon/cyberpunk, heavy gradients, stock photos, generic developer illustrations, skill percentages, logo walls, fake terminal decoration, hover-only essential content, unsupported expertise claims, constant decorative motion, blocking load animations.
 
-## Visual Language
-- Deep charcoal / near-black background
-- Slightly lighter surfaces
-- Off-white primary text
-- Muted gray secondary text
-- Restrained electric-blue accent
-- Optional subtle blue-violet ambient accent
-- Thin borders
-- Subtle technical grid
-- Large whitespace
-- Strong editorial typography
+Fonts: prefer locally available/system fonts (design spec for the homepage refinement: no new remote font request). Note the current code does load Google Fonts; see [ROADMAP.md](ROADMAP.md).
 
-Avoid neon cyberpunk, excessive gradients, generic developer illustrations and stock photography.
+## Information architecture
+Nav: Work / Experience / About / Contact / Résumé. Routes: `/`, `/experience`, `/about`, `/contact`, `/resume` exist; `/work/[slug]` is planned.
 
-## Typography
-Primary: modern clean sans-serif.
-Secondary: monospace for technical labels, metadata, numbers and annotations.
+Homepage section order (matches `app/page.tsx`): Hero → engineering-approach overview (four-step flow: Problem → Investigate → Solution → Result) → Selected Engineering Work (`#work`) → How I Work (`#approach`) → Career ("The Path So Far") → Things I've Built → Engineering Toolbox → Experience (`#experience`) → Engineering With AI (`#ai`) → Contact (`#contact`).
 
-## Homepage Order
-1. Hero
-2. Selected Engineering Work
-3. Engineering Approach
-4. Career Story
-5. Things I've Built
-6. Engineering Toolbox
-7. Experience
-8. Engineering With AI
-9. Contact
-10. Footer
+Hero copy: "SENIOR SOFTWARE ENGINEER" / "Mobile & Cross-Platform"; CTAs "Explore My Work" and "View Résumé".
 
-## Hero
-**SENIOR SOFTWARE ENGINEER**
+## Section rules
+- **Work cards:** number, category, project, short problem/result, technologies, case-study CTA. Desktop 2×2 (may alternate direction); mobile stacks. Case-study CTAs are non-navigating spans until real destinations exist.
+- **Approach:** six stages Problem, Investigation, Decision, Implementation, Validation, Result (current homepage). Older docs listed Understand → Investigate → Plan → Build → Validate → Improve; the code is authoritative. Connected row on desktop, vertical on mobile.
+- **Career story:** approx. 2014 Systems Engineer → Android → native mobile → cross-platform → migration/modernization → Senior Software Engineer / AI-assisted development. Do not invent exact years.
+- **Independent projects:** show Archived, In Development and Planned states separately and label them.
+- **Toolbox:** groups Mobile, Languages, Frontend, Backend/Data, Engineering, AI, Exploring. Display items as wrapped chips in an auto-fitting card grid. No proficiency percentages.
+- **Case study page (planned):** top summary (Project / Role / Technology / Category / Result), then Overview → Problem → Context → Constraints → Investigation → Approach → Technical Decisions → Implementation → Validation → Result → Lessons Learned. Prefer before/after and architecture diagrams, migration flows, mobile screenshots, useful code fragments. If a metric is unknown, use bounded qualitative language.
 
-# Mobile & Cross-Platform
-
-Mobile engineer. Software builder. Problem solver.
-
-Supporting copy:
-I build, modernize, maintain and troubleshoot software across native mobile and cross-platform systems.
-
-CTAs:
-Explore My Work / View Résumé
-
-Technology labels:
-Android / iOS / React Native / .NET MAUI
-
-Hero visual:
-Problem to Investigate to Solution to Result
-
-## Case Study Visuals
-Prefer:
-- Before/after diagrams
-- Architecture diagrams
-- Migration flows
-- Technical metadata
-- Mobile screenshots
-- Useful code fragments
-
-Technical content should be the primary visual material.
-
-## Animation
-Use subtle section reveals, diagram transitions and interaction states.
-Respect prefers-reduced-motion.
-Avoid constant decorative movement and blocking loading animations.
-
-## Mobile
-Treat mobile as a first-class layout. Stack content, preserve hierarchy, simplify diagrams and avoid horizontal overflow.
-
-## Accessibility
-Semantic hierarchy, visible focus, keyboard navigation, sufficient contrast, reduced motion and meaningful alt text.
-
-## Anti-Patterns
-No skill percentages, giant logo walls, generic portfolio templates, excessive animation, fake terminal decoration, unsupported expertise claims or hover-only essential content.
+## Motion, responsive, accessibility
+- Subtle section reveals and interaction states only; honor `prefers-reduced-motion` (`app/globals.css` has a reduce block; keep it working).
+- Mobile is first-class: stack, keep hierarchy, simplify diagrams, no horizontal overflow (check 390px and 1440px).
+- Semantic headings/landmarks, skip link (required by design, not yet implemented), visible focus, keyboard reachability, contrast, meaningful alt text (empty alt for decorative images), no interactive `<div>`s.

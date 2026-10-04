@@ -60,8 +60,5 @@ venv/
 .venv/
 .pytest_cache/
 
-# Project-specific generated files
-_bmad/
-_bmad-output/
-.agents/
-.claude/
+# Local AI-tool state (shared config and AGENTS.md are tracked)
+.claude/settings.local.json
