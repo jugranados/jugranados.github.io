@@ -6,18 +6,50 @@
     "tagline": "Mobile engineer. Software builder. Problem solver."
   },
   "hero": {
-    "titleLines": ["Mobile & Cross-", "Platform"],
-    "lede": "I build, modernize, maintain and troubleshoot software across native mobile and cross-platform systems.",
-    "primaryCta": { "label": "Explore My Work", "href": "#work" },
-    "secondaryCta": { "label": "View Résumé", "href": "/resume" },
+    "titleLines": [
+      "Mobile & Cross-",
+      "Platform"
+    ],
+    "lede": "12+ years building, maintaining, modernizing and troubleshooting software across native mobile and cross-platform systems.",
+    "primaryCta": {
+      "label": "Explore My Work",
+      "href": "#work"
+    },
+    "secondaryCta": {
+      "label": "View Résumé",
+      "href": "/resume"
+    },
     "coreStackLabel": "Core Stack",
-    "coreStack": ["Android", "iOS", "React Native", ".NET MAUI", "React.js", "Next.js"]
+    "coreStack": [
+      "Android",
+      "iOS",
+      "React Native",
+      ".NET MAUI",
+      "React.js",
+      "Next.js"
+    ]
   },
   "processSteps": [
-    { "label": "Problem", "detail": "Identify bottleneck", "icon": "alert" },
-    { "label": "Investigate", "detail": "Root cause analysis", "icon": "search" },
-    { "label": "Solution", "detail": "Robust architecture", "icon": "cpu" },
-    { "label": "Result", "detail": "Scale with stability", "icon": "check" }
+    {
+      "label": "Problem",
+      "detail": "Understand the real constraint",
+      "icon": "alert"
+    },
+    {
+      "label": "Investigate",
+      "detail": "Research and identify root causes",
+      "icon": "search"
+    },
+    {
+      "label": "Solution",
+      "detail": "Choose a practical approach",
+      "icon": "cpu"
+    },
+    {
+      "label": "Result",
+      "detail": "Validate and improve",
+      "icon": "check"
+    }
   ],
   "work": {
     "eyebrow": "Selected Work",
@@ -25,26 +57,26 @@
     "items": [
       {
         "title": "GCash — Architecture Modernization",
-        "role": "Lead Mobile Architect",
-        "description": "Restructured legacy architecture for one of Southeast Asia's largest fintech platforms. Optimized state management, module compilation boundaries, and localized data persistence strategies to increase development velocity and baseline reliability.",
+        "role": "Android Developer",
+        "description": "Worked on modernizing a large legacy Android application, moving from Java/RxJava-era patterns toward Kotlin and cleaner architecture to improve maintainability, testability, performance, and long-term development.",
         "diagram": "architecture"
       },
       {
         "title": "Xamarin to .NET MAUI — Platform Migration",
-        "role": "Principal Migrations Consultant",
-        "description": "Led cross-platform migration from deprecated Xamarin framework to .NET MAUI. Redesigned layout systems, decoupled custom rendering abstractions, and streamlined target multi-platform pipeline integrations with negligible service disruption.",
+        "role": "Mobile Developer",
+        "description": "Planned and executed a Xamarin to .NET MAUI migration as Xamarin support approached end-of-life. Reused existing business logic where practical, migrated presentation layers, and resolved platform issues incrementally; completed roughly 90% of the migration before leaving the company.",
         "diagram": "migration"
       },
       {
         "title": "Damstra Learn — Legacy Modernization",
-        "role": "Senior Mobile Engineer",
-        "description": "Modernized aging enterprise learning platform with improved architecture. Replaced heavy local webview components with performant native abstractions, resolving memory leak vectors and performance issues.",
+        "role": "Mobile Developer",
+        "description": "Modernized a React Native learning application by updating dependencies incrementally, replacing deprecated libraries, aligning Android and iOS requirements, updating CI/CD configuration, and improving project documentation for future developers.",
         "diagram": "legacy"
       },
       {
         "title": "Tara Tsek — Reusable Engineering / Library Design",
-        "role": "Core Library Architect",
-        "description": "Designed shared component libraries for cross-project reuse. Established comprehensive interface specifications, abstract wrapper patterns, and structured internal distribution pipelines across multiple internal utility projects.",
+        "role": "Android Developer",
+        "description": "Created a reusable chart-generation library for a legacy Android health application, replacing manually implemented chart logic with a reusable component that was also applied to another application.",
         "diagram": "library"
       }
     ]
@@ -53,12 +85,30 @@
     "eyebrow": "Approach",
     "title": "How I Work",
     "stages": [
-      { "title": "Problem", "description": "Isolate the actual system bottleneck or platform constraint." },
-      { "title": "Investigation", "description": "Profile resource consumption, trace stack calls, audit dependencies." },
-      { "title": "Decision", "description": "Draft engineering specifications comparing trade-offs explicitly." },
-      { "title": "Implementation", "description": "Write clean, modular, and thoroughly isolated code blocks." },
-      { "title": "Validation", "description": "Apply unit, integration, and target-environment profiling tests." },
-      { "title": "Result", "description": "Deploy resilient, performant, and future-proof systems." }
+      {
+        "title": "Understand",
+        "description": "Clarify the requirement, existing system, constraints, and expected outcome."
+      },
+      {
+        "title": "Investigate",
+        "description": "Trace issues, review dependencies, research options, and identify root causes."
+      },
+      {
+        "title": "Plan",
+        "description": "Break the problem into practical implementation steps and evaluate trade-offs."
+      },
+      {
+        "title": "Build",
+        "description": "Implement incrementally, reuse proven logic where appropriate, and keep changes maintainable."
+      },
+      {
+        "title": "Validate",
+        "description": "Test functionality, debug issues, review behavior, and verify requirements."
+      },
+      {
+        "title": "Improve",
+        "description": "Document decisions, address follow-up issues, and leave the system easier to maintain."
+      }
     ]
   },
   "projects": {
@@ -68,103 +118,212 @@
       {
         "name": "TaxPH 2.0",
         "status": "current",
-        "label": "Current",
-        "description": "Modernized tax computation engine for Philippine taxpayers. Features offline calculations, dynamic bracket updates, and interactive breakdown graphs."
+        "label": "In Development",
+        "description": "A modern revival of the original TaxPH app, planned around current Philippine tax calculations and a cleaner, more maintainable product experience."
       },
       {
         "name": "Pet Records",
         "status": "planned",
         "label": "Planned",
-        "description": "A robust pet health and record management application utilizing local-first sync systems and granular vaccination schedulers."
+        "description": "A planned modern application for organizing pet records and health-related information."
       },
       {
         "name": "Politician Records",
         "status": "planned",
         "label": "Planned",
-        "description": "Public accountability tracker aimed at cataloging voting histories, project sponsorships, and municipal budget allocations."
+        "description": "A planned source-oriented information platform for Philippine politicians, designed to help voters review structured public information and supporting references."
       },
       {
         "name": "TaxPH (V1)",
         "status": "archived",
         "label": "Archived",
-        "description": "The original tax computation tool for local taxpayers, now preserved in an archival status."
+        "description": "An Android income-tax calculator built for Filipino workers. Tax-table data could be updated through a GitHub-hosted text file without requiring a paid database."
       },
       {
         "name": "TrainsPH",
         "status": "archived",
         "label": "Archived",
-        "description": "A simple scheduling application for regional train lines across Manila, retired due to api endpoint deprecations."
+        "description": "An Android MRT crowd-monitoring app that used crowdsourcing and traffic estimates to help commuters understand station congestion when public CCTV access became limited."
       }
     ]
   },
   "toolbox": {
     "eyebrow": "Engineering Toolbox",
-    "title": "Strong across mobile, platform, cloud and delivery systems.",
+    "title": "Deep in mobile engineering. Broad across software delivery.",
     "groups": [
-      { "name": "Mobile", "items": ["Android", "iOS", "React Native", ".NET MAUI"] },
-      { "name": "Languages", "items": ["Kotlin", "Swift", "TypeScript", "C#", "Java"] },
-      { "name": "Frontend", "items": ["Next.js", "React", "HTML", "CSS"] },
-      { "name": "Backend", "items": ["Node.js", "PHP", "Firebase", "REST", "WordPress"] },
-      { "name": "Engineering", "items": ["CI/CD", "Testing", "Debugging", "Automation"] },
-      { "name": "AI", "items": ["Code review", "Prompt design", "Debugging", "Docs"] }
+      {
+        "name": "Mobile",
+        "items": [
+          "Android",
+          "iOS",
+          "React Native",
+          ".NET MAUI",
+          "Xamarin",
+          "Cordova"
+        ]
+      },
+      {
+        "name": "Languages",
+        "items": [
+          "Kotlin",
+          "Java",
+          "Swift",
+          "C#",
+          "TypeScript",
+          "JavaScript",
+          "PHP",
+          "Ruby"
+        ]
+      },
+      {
+        "name": "Frontend",
+        "items": [
+          "React",
+          "Next.js",
+          "AngularJS",
+          "HTML",
+          "CSS"
+        ]
+      },
+      {
+        "name": "Backend & Data",
+        "items": [
+          "Node.js",
+          "REST APIs",
+          "MySQL",
+          "MongoDB",
+          "SQL",
+          "Firebase"
+        ]
+      },
+      {
+        "name": "Engineering",
+        "items": [
+          "CI/CD",
+          "Testing",
+          "Debugging",
+          "Code Review",
+          "Performance",
+          "Migration",
+          "SonarQube",
+          "Bitbucket"
+        ]
+      },
+      {
+        "name": "Delivery & Tooling",
+        "items": [
+          "Jira",
+          "Jira Service Management",
+          "Trello",
+          "Workflows",
+          "Automation",
+          "Dashboards",
+          "Acceptance Criteria",
+          "AWS"
+        ]
+      },
+      {
+        "name": "AI",
+        "items": [
+          "GitHub Copilot",
+          "Claude",
+          "AI-assisted Research",
+          "AI-assisted Development",
+          "Code Review",
+          "Debugging",
+          "Testing",
+          "Documentation"
+        ]
+      },
+      {
+        "name": "Exploring",
+        "items": [
+          "Flutter", 
+          "GenAI"
+        ]
+      }
     ]
   },
   "experience": {
     "eyebrow": "Experience",
     "title": "The Path So Far",
     "tenure": "12+ years building software",
-    "journey": "Systems Engineer → Android Developer → Senior Mobile Engineer → Software Engineer → Consultant",
+    "journey": "Systems Engineer → Android Developer → Senior Mobile Engineer → Cross-Platform Software Engineer → Consultant",
     "career": [
       {
         "period": "Current",
         "company": "Deloitte",
         "role": "Consultant",
-        "description": "Mobile and Frontend Engineering, AI-assisted development, React/Next.js, and Jira platform administration."
+        "description": "Mobile and frontend engineering, React/Next.js, AI-assisted development, and broader technical consulting capabilities."
       },
       {
         "period": "2021–2025",
         "company": "Ideagen",
         "role": "Software Engineer",
-        "description": "Cross-platform development, migrations, modernization, troubleshooting, releases, and code review."
+        "description": "Cross-platform mobile engineering across React Native, Xamarin and .NET MAUI, including migrations, dependency modernization, troubleshooting, code review, CI/CD, and Android/iOS releases."
       },
       {
         "period": "2018–2021",
         "company": "Mynt / GCash",
         "role": "Android Developer",
-        "description": "Legacy modernization, maintainability, testing, performance, stability, and debugging."
+        "description": "Android engineering for a large fintech application, including legacy modernization, performance and stability improvements, production debugging, maintainability, testing, and knowledge sharing."
       },
       {
         "period": "2017–2018",
         "company": "ARKRAY",
         "role": "Senior Mobile Engineer",
-        "description": "Android development and reusable engineering components, including a chart-generation library."
+        "description": "Android health applications, reusable chart-generation engineering, localization, regional customization, and developer mentoring."
       },
       {
         "period": "2014–2017",
-        "company": "Engineering Foundation",
+        "company": "Imperium Technology → Tagcash Ltd",
         "role": "Systems Engineer → Android Developer",
-        "description": "Imperium Technology → Tagcash Ltd. Started in backend, web, APIs, databases, and Android development before specializing in mobile engineering."
+        "description": "Started across backend, web, APIs, databases and Android development, then moved deeper into mobile engineering including NFC, beacon detection, location-based features and commuter ticketing."
       }
     ],
     "otherTitle": "Beyond Mobile Engineering",
     "other": [
-      { "period": "2023–2024", "title": "PMO / Technical Project Coordinator" },
-      { "period": "2025", "title": "Jira Administrator — Client Engagement" },
-      { "title": "Teaching & Mentoring" }
+      {
+        "period": "2023–2024",
+        "title": "PMO / Technical Project Coordinator — All Works PH",
+        "description": "Translated stakeholder requirements into development tasks, user flows, mock screens and acceptance criteria; researched implementation and tool options, tracked delivery in Trello, performed functional validation, and coordinated with developers and the development lead."
+      },
+      {
+        "period": "2025",
+        "title": "Jira Administrator — Client Engagement",
+        "description": "Configured Jira permissions, workflows, automation, bulk uploads and dashboards for a short client engagement. Client identity intentionally omitted."
+      },
+      {
+        "period": "2013–2014",
+        "title": "Part-Time Programming Instructor",
+        "description": "Taught Java Programming, C# Programming, and Computer Hardware & Software Servicing for one academic year after college."
+      }
     ]
   },
   "ai": {
     "eyebrow": "AI + Engineering",
     "title": "Engineering With AI",
     "intro": [
-      "I treat artificial intelligence as a robust capability multiplier rather than a developer replacement. By adopting LLM-assisted workflows, I accelerate boilerplate scaffolding, speed up root-cause diagnostics, and generate technical documentation templates.",
-      "The priority always remains deterministic software architecture, rigorous manual review, and standard-compliant library integration."
+      "I use AI as an engineering accelerator for research, debugging, implementation, testing, code review, and documentation while keeping technical decisions grounded in engineering judgment.",
+      "AI-assisted output is reviewed, validated, and tested before it becomes part of the solution."
     ],
     "examples": [
-      { "title": "Code Generation", "description": "Accelerating clean boilerplate structure setup." },
-      { "title": "Refactoring Assistance", "description": "Investigating optimization vectors for legacy code." },
-      { "title": "Documentation", "description": "Drafting robust architecture spec sheets." },
-      { "title": "Testing Scaffolds", "description": "Creating complex unit-test matrices." }
+      {
+        "title": "Research & Exploration",
+        "description": "Comparing approaches, libraries, APIs, and implementation options."
+      },
+      {
+        "title": "Debugging & Refactoring",
+        "description": "Accelerating investigation of issues and exploring maintainable improvements."
+      },
+      {
+        "title": "Testing",
+        "description": "Assisting with test scenarios and unit-test generation while retaining developer review."
+      },
+      {
+        "title": "Documentation",
+        "description": "Drafting technical documentation and clarifying implementation decisions."
+      }
     ]
   },
   "contact": {
@@ -172,7 +331,10 @@
     "title": "Let’s Work Together",
     "intro": "Open to senior mobile engineering roles and technical consulting opportunities. Let’s build stable systems.",
     "email": "hello@jjgranados.dev",
-    "linkedin": { "label": "linkedin.com/in/jjsgranados", "href": "https://www.linkedin.com/in/jjsgranados/" },
+    "linkedin": {
+      "label": "linkedin.com/in/jjsgranados",
+      "href": "https://www.linkedin.com/in/jjsgranados/"
+    },
     "github": "https://github.com/bobijovz",
     "resumeLabel": "View Résumé",
     "year": "2026"
