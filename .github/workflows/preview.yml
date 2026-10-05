@@ -22,13 +22,10 @@ jobs:
         run: npm ci
 
       - name: Build
-        # Use your project's build command. For Next.js static export this may be: npm run build && npm run export
-        run: |
-          npm run build --if-present
-          npm run export --if-present
+        run: npm run build
 
       - name: Upload build artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: preview-site
           path: out/

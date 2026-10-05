@@ -1,3 +1,16 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'About | June Jovi Granados',
+  alternates: {
+    canonical: '/about/',
+  },
+  openGraph: {
+    title: 'About | June Jovi Granados',
+    url: '/about/',
+  },
+};
+
 export default function AboutPage() {
   return (
     <main className="page-shell">

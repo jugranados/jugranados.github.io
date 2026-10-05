@@ -13,7 +13,18 @@ import {
   type LucideIcon,
 } from 'lucide-react';
 import { Fragment } from 'react';
+import Link from 'next/link';
+import type { Metadata } from 'next';
 import { home, type ProcessIcon } from '@/content/home';
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    url: '/',
+  },
+};
 
 const processIcons: Record<ProcessIcon, LucideIcon> = {
   alert: AlertTriangle,
@@ -59,8 +70,8 @@ export default function HomePage() {
             <p className="tagline">{profile.tagline}</p>
             <p className="lede">{hero.lede}</p>
             <div className="cta-row">
-              <a href={hero.primaryCta.href} className="button primary">{hero.primaryCta.label}</a>
-              <a href={hero.secondaryCta.href} className="button secondary">{hero.secondaryCta.label}</a>
+              <Link href={hero.primaryCta.href} className="button primary">{hero.primaryCta.label}</Link>
+              <Link href={hero.secondaryCta.href} className="button secondary">{hero.secondaryCta.label}</Link>
             </div>
           </div>
 
@@ -275,9 +286,9 @@ export default function HomePage() {
               {contact.linkedin.label}
             </a>
           </div>
-          <a className="button primary contact-resume" href={hero.secondaryCta.href}>
+          <Link className="button primary contact-resume" href={hero.secondaryCta.href}>
             {contact.resumeLabel} <ArrowUpRight size={16} aria-hidden="true" />
-          </a>
+          </Link>
         </section>
       </main>
 

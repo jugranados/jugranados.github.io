@@ -1,4 +1,17 @@
 import { ArrowUpRight, Mail } from 'lucide-react';
+import Link from 'next/link';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Contact | June Jovi Granados',
+  alternates: {
+    canonical: '/contact/',
+  },
+  openGraph: {
+    title: 'Contact | June Jovi Granados',
+    url: '/contact/',
+  },
+};
 
 export default function ContactPage() {
   return (
@@ -20,9 +33,9 @@ export default function ContactPage() {
             linkedin.com/in/jjsgranados
           </a>
         </div>
-        <a className="button primary contact-resume" href="/resume">
+        <Link className="button primary contact-resume" href="/resume">
           View Résumé <ArrowUpRight size={16} aria-hidden="true" />
-        </a>
+        </Link>
       </section>
     </main>
   );

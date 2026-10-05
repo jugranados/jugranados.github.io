@@ -1,3 +1,16 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Résumé | June Jovi Granados',
+  alternates: {
+    canonical: '/resume/',
+  },
+  openGraph: {
+    title: 'Résumé | June Jovi Granados',
+    url: '/resume/',
+  },
+};
+
 export default function ResumePage() {
   return (
     <main className="page-shell">

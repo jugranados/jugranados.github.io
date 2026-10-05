@@ -5,10 +5,12 @@ on:
   push:
     branches: [ master ]
 
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 jobs:
   build:
@@ -26,12 +28,10 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: |
-          npm run build --if-present
-          npm run export --if-present
+        run: npm run build
 
       - name: Upload artifact for GitHub Pages
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           path: out/
 
@@ -40,6 +40,11 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       pages: write
+      id-token: write
     steps:
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v1
+        id: deployment
+        uses: actions/deploy-pages@v4
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}

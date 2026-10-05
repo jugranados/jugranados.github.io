@@ -1,21 +1,27 @@
 import type { MetadataRoute } from 'next';
 
+const siteUrl = 'https://jugranados.github.io';
+
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: 'https://example.com/',
+      url: `${siteUrl}/`,
       lastModified: new Date(),
     },
     {
-      url: 'https://example.com/experience',
+      url: `${siteUrl}/experience/`,
       lastModified: new Date(),
     },
     {
-      url: 'https://example.com/about',
+      url: `${siteUrl}/about/`,
       lastModified: new Date(),
     },
     {
-      url: 'https://example.com/contact',
+      url: `${siteUrl}/contact/`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${siteUrl}/resume/`,
       lastModified: new Date(),
     },
   ];

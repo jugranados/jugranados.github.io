@@ -1,10 +1,20 @@
 import './globals.css';
 import type { Metadata } from 'next';
 
+const siteUrl = new URL('https://jugranados.github.io/');
+
 export const metadata: Metadata = {
+  metadataBase: siteUrl,
   title: 'June Jovi Granados | Mobile Developer',
   description:
     'Mobile Developer based in Central Luzon, Philippines, with experience in native and cross-platform app development, product delivery, and financial services technology.',
+  openGraph: {
+    type: 'website',
+    title: 'June Jovi Granados | Mobile Developer',
+    description:
+      'Mobile Developer based in Central Luzon, Philippines, with experience in native and cross-platform app development, product delivery, and financial services technology.',
+    siteName: 'June Jovi Granados | Mobile Developer',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

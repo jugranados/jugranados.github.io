@@ -4,7 +4,7 @@ Static-first, content-driven site. No database, CMS, auth or backend in V1. Why:
 
 ## Current state (verified 2026-09-29)
 - Next.js 14.2.15 App Router, React 18, TypeScript (`strict`), `lucide-react` for icons. Plain CSS in `app/globals.css` with `:root` design tokens; no CSS framework.
-- `next.config.mjs`: `output: 'export'`, `trailingSlash: true`, `images.unoptimized: true`. Output goes to `out/`. No `basePath` or `assetPrefix`.
+- `next.config.mjs`: `output: 'export'`, `trailingSlash: true`, `images.unoptimized: true`. Output goes to `out/`.
 - Layout at repo root, **no `src/`**: `app/layout.tsx`, `app/page.tsx` (homepage markup), `app/{about,contact,experience,resume}/page.tsx`, `app/sitemap.ts`, `app/robots.ts`, `app/icon.svg`. Path alias `@/*` → repo root.
 - **Homepage copy lives in `content/home.json`**, typed by `content/home.ts` (`HomeContent`) and imported by `app/page.tsx`. Icons and diagram visuals stay in code, referenced by key (`icon`, `diagram`). No MDX, no `public/` directory, no `/work/[slug]` routes.
 - All pages are Server Components; there is no `'use client'` and no state management.
@@ -29,14 +29,7 @@ Static-first, content-driven site. No database, CMS, auth or backend in V1. Why:
 ## Deployment
 `.github/workflows/`: `production.yml` (push to `master` → `npm ci` → `npm run build` → upload `out/` → GitHub Pages), `preview.yml` (PR build artifact), `lighthouse.yml` (LHCI), `mdx-validate.yml` (frontmatter check on PRs). All use Node 18. There is no `export` npm script; `output: 'export'` makes `next build` emit `out/`.
 
-**Public URL is undecided.** Choose before setting metadata/`basePath`:
-
-| Site URL | `basePath` | Canonical base |
-| --- | --- | --- |
-| `https://USER.github.io/REPO/` | `/REPO` | `https://USER.github.io/REPO` |
-| `https://USER.github.io/` or custom domain at root | empty | that origin |
-
-`basePath` is baked into the client bundle at build time, so rebuild if it changes. `next/link` adds it to route links but not to `public/` asset URLs; use one helper for those. Keep the canonical site URL as a separate build setting. Custom domains also need GitHub Pages settings (Settings → Pages → Source: GitHub Actions).
+The public URL is `https://jugranados.github.io/`, using the GitHub user-site repository `jugranados.github.io`. Metadata, sitemap, and robots URLs use that root URL. GitHub Pages must be configured in repository Settings → Pages → Build and deployment → Source: GitHub Actions.
 
 ## Planned (not implemented): content layer and case studies
 Introduce only when the first case study is written; adapt to the real repo layout (`app/` at root, not `src/`).

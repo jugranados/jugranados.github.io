@@ -3,7 +3,6 @@
 Active work only, each item verified as a gap against the code on 2026-09-29. Unordered; the owner sets priority. Older BMAD epics/todos are in [archive/bmad/](archive/bmad/README.md).
 
 ## Blocking a credible launch
-- **Decide the public URL** (repo path vs root vs custom domain), then set `basePath`, canonical URL, Open Graph metadata, and replace `https://example.com` in `app/sitemap.ts` and `app/robots.ts`. See [ARCHITECTURE.md](ARCHITECTURE.md).
 - **Case studies:** no `/work/[slug]` routes exist; work cards have non-navigating CTAs. Needs verified facts, role and disclosure approval for GCash, Xamarin → .NET MAUI, Damstra Learn, Tara Tsek before publishing (V1 acceptance).
 - **Verify published claims:** work-card roles ("Lead Mobile Architect", "Principal Migrations Consultant", "Core Library Architect"), the résumé line "Deloitte", and profile name ("June Jovi Granados" in metadata/About vs "JJ Granados" in docs). Confirm with the owner.
 - **Contact (FR-10):** no GitHub link and no email link on the site; `/resume` is a text page with no PDF and there is no `public/` directory.

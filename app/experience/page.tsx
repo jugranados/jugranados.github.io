@@ -1,3 +1,16 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Experience | June Jovi Granados',
+  alternates: {
+    canonical: '/experience/',
+  },
+  openGraph: {
+    title: 'Experience | June Jovi Granados',
+    url: '/experience/',
+  },
+};
+
 export default function ExperiencePage() {
   return (
     <main className="page-shell">
