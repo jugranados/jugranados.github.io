@@ -5,8 +5,8 @@ Static-first, content-driven site. No database, CMS, auth or backend in V1. Why:
 ## Current state (verified 2026-09-29)
 - Next.js 14.2.15 App Router, React 18, TypeScript (`strict`), `lucide-react` for icons. Plain CSS in `app/globals.css` with `:root` design tokens; no CSS framework.
 - `next.config.mjs`: `output: 'export'`, `trailingSlash: true`, `images.unoptimized: true`. Output goes to `out/`. No `basePath` or `assetPrefix`.
-- Layout at repo root, **no `src/`**: `app/layout.tsx`, `app/page.tsx` (homepage, ~360 lines), `app/{about,contact,experience,resume}/page.tsx`, `app/sitemap.ts`, `app/robots.ts`, `app/icon.svg`. Path alias `@/*` → repo root.
-- **Content is inline** in `app/page.tsx` (`profile`, `workItems`, `approachStages`, `processSteps`, etc.), not in a content layer. No MDX, no `public/` directory, no `/work/[slug]` routes.
+- Layout at repo root, **no `src/`**: `app/layout.tsx`, `app/page.tsx` (homepage markup), `app/{about,contact,experience,resume}/page.tsx`, `app/sitemap.ts`, `app/robots.ts`, `app/icon.svg`. Path alias `@/*` → repo root.
+- **Homepage copy lives in `content/home.json`**, typed by `content/home.ts` (`HomeContent`) and imported by `app/page.tsx`. Icons and diagram visuals stay in code, referenced by key (`icon`, `diagram`). No MDX, no `public/` directory, no `/work/[slug]` routes.
 - All pages are Server Components; there is no `'use client'` and no state management.
 - External services: Google Fonts (`app/layout.tsx`); LinkedIn link. No analytics, no APIs.
 - `sitemap.ts` and `robots.ts` hardcode `https://example.com`. `layout.tsx` metadata has title/description only.

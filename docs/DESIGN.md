@@ -12,7 +12,7 @@ Fonts: prefer locally available/system fonts (design spec for the homepage refin
 ## Information architecture
 Nav: Work / Experience / About / Contact / Résumé. Routes: `/`, `/experience`, `/about`, `/contact`, `/resume` exist; `/work/[slug]` is planned.
 
-Homepage section order (matches `app/page.tsx`): Hero → engineering-approach overview (four-step flow: Problem → Investigate → Solution → Result) → Selected Engineering Work (`#work`) → How I Work (`#approach`) → Career ("The Path So Far") → Things I've Built → Engineering Toolbox → Experience (`#experience`) → Engineering With AI (`#ai`) → Contact (`#contact`).
+Homepage section order (matches `app/page.tsx`): Hero → engineering-approach overview (four-step flow: Problem → Investigate → Solution → Result) → Selected Engineering Work (`#work`) → How I Work (`#approach`) → Things I've Built → Engineering Toolbox → Experience ("The Path So Far", `#experience`) → Engineering With AI (`#ai`) → Contact (`#contact`). The separate Career section is currently removed.
 
 Hero copy: "SENIOR SOFTWARE ENGINEER" / "Mobile & Cross-Platform"; CTAs "Explore My Work" and "View Résumé".
 
@@ -20,6 +20,7 @@ Hero copy: "SENIOR SOFTWARE ENGINEER" / "Mobile & Cross-Platform"; CTAs "Explore
 - **Work cards:** number, category, project, short problem/result, technologies, case-study CTA. Desktop 2×2 (may alternate direction); mobile stacks. Case-study CTAs are non-navigating spans until real destinations exist.
 - **Approach:** six stages Problem, Investigation, Decision, Implementation, Validation, Result (current homepage). Older docs listed Understand → Investigate → Plan → Build → Validate → Improve; the code is authoritative. Connected row on desktop, vertical on mobile.
 - **Career story:** approx. 2014 Systems Engineer → Android → native mobile → cross-platform → migration/modernization → Senior Software Engineer / AI-assisted development. Do not invent exact years.
+- **Experience section:** replace the homepage section with a vertical career timeline under “The Path So Far,” separated from the toolbox by the standard section divider. Use accent-colored dates and no horizontal separators between timeline entries. Place dates beside entries on desktop and above each entry on mobile; keep the timeline spine and markers visible at both sizes. List work beyond mobile engineering separately.
 - **Independent projects:** show Archived, In Development and Planned states separately and label them.
 - **Toolbox:** groups Mobile, Languages, Frontend, Backend/Data, Engineering, AI, Exploring. Display items as wrapped chips in an auto-fitting card grid. No proficiency percentages.
 - **Engineering with AI:** section heading above a two-column layout, with workflow context beside a vertical stack of capability cards; stack the columns on mobile.

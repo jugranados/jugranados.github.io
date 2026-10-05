@@ -561,21 +561,18 @@ button:focus-visible {
 }
 
 .story-grid p,
-.timeline-row p,
-.experience-row p {
+.timeline-row p {
   margin: 0;
   color: var(--muted);
   font-size: 14px;
 }
 
-.timeline-stack,
-.experience-list {
+.timeline-stack {
   display: grid;
   gap: 12px;
 }
 
-.timeline-row,
-.experience-row {
+.timeline-row {
   display: grid;
   grid-template-columns: 145px 1fr auto;
   gap: 18px;
@@ -591,11 +588,150 @@ button:focus-visible {
   text-transform: uppercase;
 }
 
-.timeline-row strong,
-.experience-row h3 {
+.timeline-row strong {
   display: block;
   margin: 0 0 5px;
   font-size: 0.72rem;
+}
+
+.experience-section.section-card {
+  border-top: 1px solid var(--line-soft);
+}
+
+.experience-section > .section-heading {
+  margin-bottom: 12px;
+}
+
+.experience-tenure,
+.experience-journey {
+  margin: 0;
+  color: var(--muted);
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.experience-journey {
+  display: none;
+  margin-top: 10px;
+  line-height: 1.6;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.career-timeline {
+  position: relative;
+  display: grid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.career-timeline::before {
+  position: absolute;
+  top: 8px;
+  bottom: 29px;
+  left: 121px;
+  width: 1px;
+  background: var(--line);
+  content: '';
+}
+
+.career-entry {
+  position: relative;
+  display: grid;
+  grid-template-columns: 112px 20px minmax(0, 1fr);
+  padding: 20px 0 24px;
+}
+
+.career-entry::before {
+  position: absolute;
+  top: 25px;
+  left: 118px;
+  z-index: 1;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  content: '';
+}
+
+.career-period {
+  grid-column: 1;
+  color: var(--accent);
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+  font-size: 0.72rem;
+  line-height: 1.5;
+}
+
+.career-entry-content {
+  grid-column: 3;
+}
+
+.career-entry-content h3 {
+  margin: 0 0 2px;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.career-role,
+.career-description {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.875rem;
+  line-height: 1.55;
+}
+
+.career-description {
+  margin-top: 5px;
+}
+
+.other-experience {
+  margin-top: 12px;
+}
+
+.other-experience > h3 {
+  margin: 0 0 14px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.other-experience-list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.other-experience-list li {
+  position: relative;
+  padding-left: 20px;
+}
+
+.other-experience-list li::before {
+  position: absolute;
+  top: 7px;
+  left: 2px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  content: '';
+}
+
+.other-experience-list .career-period {
+  display: block;
+  margin-bottom: 2px;
+}
+
+.other-experience-list h4 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.4;
 }
 
 .project-list {
@@ -723,17 +859,6 @@ button:focus-visible {
   font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
   font-size: 0.78rem;
   line-height: 1.4;
-}
-
-.experience-row {
-  grid-template-columns: 145px 1fr 55px;
-}
-
-.experience-row::after {
-  content: 'View →';
-  color: var(--accent);
-  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
-  font-size: 0.58rem;
 }
 
 .ai-layout {
@@ -1015,6 +1140,50 @@ button:focus-visible {
     content: '';
   }
 
+  .experience-section {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .experience-journey {
+    display: block;
+    font-size: 0.62rem;
+  }
+
+  .career-timeline::before {
+    top: 7px;
+    bottom: 26px;
+    left: 8px;
+  }
+
+  .career-entry {
+    grid-template-columns: 18px minmax(0, 1fr);
+    gap: 0;
+    padding: 12px 0 18px;
+  }
+
+  .career-entry::before {
+    top: 17px;
+    left: 5px;
+  }
+
+  .career-period,
+  .career-entry-content {
+    grid-column: 2;
+  }
+
+  .career-entry-content h3 {
+    font-size: 1rem;
+  }
+
+  .career-role,
+  .career-description {
+    font-size: 0.8125rem;
+  }
+
+  .other-experience {
+    margin-top: 14px;
+  }
 }
 
 @media (max-width: 520px) {
@@ -1082,14 +1251,9 @@ button:focus-visible {
     font-size: 16px;
   }
 
-  .timeline-row,
-  .experience-row {
+  .timeline-row {
     grid-template-columns: 1fr;
     gap: 8px;
-  }
-
-  .experience-row::after {
-    display: none;
   }
 
   .site-footer {

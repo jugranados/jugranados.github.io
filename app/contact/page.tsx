@@ -5,7 +5,7 @@ export default function ContactPage() {
     <main className="page-shell">
       <section className="section-card contact-card contact-page-card">
         <div className="section-heading">
-          <p className="eyebrow">Contact // 09</p>
+          <p className="eyebrow">Contact</p>
           <h1>Let’s Work Together</h1>
         </div>
         <p className="contact-intro">

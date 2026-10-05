@@ -1,159 +1,28 @@
-const profile = {
-  name: 'June Jovi Granados',
-  role: 'Mobile Developer',
-  location: 'Central Luzon, Philippines',
-  employer: 'Deloitte',
-  education: 'Polytechnic University of the Philippines',
-  summary:
-    'Experienced Mobile App Developer with a demonstrated history of working in the financial services industry. Skilled in Native iOS/Android, React Native, .NET MAUI, Firebase, PHP, WordPress, and Node.js.',
+import {
+  AlertTriangle,
+  ArrowRight,
+  ArrowUpRight,
+  CheckCircle2,
+  Cpu,
+  ExternalLink,
+  Link2,
+  Mail,
+  RefreshCw,
+  Search,
+  Zap,
+  type LucideIcon,
+} from 'lucide-react';
+import { Fragment } from 'react';
+import { home, type ProcessIcon } from '@/content/home';
+
+const processIcons: Record<ProcessIcon, LucideIcon> = {
+  alert: AlertTriangle,
+  search: Search,
+  cpu: Cpu,
+  check: CheckCircle2,
 };
 
-const workItems = [
-  {
-    title: 'GCash — Architecture Modernization',
-    role: 'Lead Mobile Architect',
-    description:
-      "Restructured legacy architecture for one of Southeast Asia's largest fintech platforms. Optimized state management, module compilation boundaries, and localized data persistence strategies to increase development velocity and baseline reliability.",
-    diagram: 'architecture',
-  },
-  {
-    title: 'Xamarin to .NET MAUI — Platform Migration',
-    role: 'Principal Migrations Consultant',
-    description:
-      'Led cross-platform migration from deprecated Xamarin framework to .NET MAUI. Redesigned layout systems, decoupled custom rendering abstractions, and streamlined target multi-platform pipeline integrations with negligible service disruption.',
-    diagram: 'migration',
-  },
-  {
-    title: 'Damstra Learn — Legacy Modernization',
-    role: 'Senior Mobile Engineer',
-    description:
-      'Modernized aging enterprise learning platform with improved architecture. Replaced heavy local webview components with performant native abstractions, resolving memory leak vectors and performance issues.',
-    diagram: 'legacy',
-  },
-  {
-    title: 'Tara Tsek — Reusable Engineering / Library Design',
-    role: 'Core Library Architect',
-    description:
-      'Designed shared component libraries for cross-project reuse. Established comprehensive interface specifications, abstract wrapper patterns, and structured internal distribution pipelines across multiple internal utility projects.',
-    diagram: 'library',
-  },
-];
-
-const approachStages = [
-  {
-    title: 'Problem',
-    description: 'Isolate the actual system bottleneck or platform constraint.',
-  },
-  {
-    title: 'Investigation',
-    description: 'Profile resource consumption, trace stack calls, audit dependencies.',
-  },
-  {
-    title: 'Decision',
-    description: 'Draft engineering specifications comparing trade-offs explicitly.',
-  },
-  {
-    title: 'Implementation',
-    description: 'Write clean, modular, and thoroughly isolated code blocks.',
-  },
-  {
-    title: 'Validation',
-    description: 'Apply unit, integration, and target-environment profiling tests.',
-  },
-  {
-    title: 'Result',
-    description: 'Deploy resilient, performant, and future-proof systems.',
-  },
-];
-
-const independentProjects = [
-  {
-    name: 'TaxPH 2.0',
-    status: 'current',
-    label: 'Current',
-    description:
-      'Modernized tax computation engine for Philippine taxpayers. Features offline calculations, dynamic bracket updates, and interactive breakdown graphs.',
-  },
-  {
-    name: 'Pet Records',
-    status: 'planned',
-    label: 'Planned',
-    description:
-      'A robust pet health and record management application utilizing local-first sync systems and granular vaccination schedulers.',
-  },
-  {
-    name: 'Politician Records',
-    status: 'planned',
-    label: 'Planned',
-    description:
-      'Public accountability tracker aimed at cataloging voting histories, project sponsorships, and municipal budget allocations.',
-  },
-  {
-    name: 'TaxPH (V1)',
-    status: 'archived',
-    label: 'Archived',
-    description: 'The original tax computation tool for local taxpayers, now preserved in an archival status.',
-  },
-  {
-    name: 'TrainsPH',
-    status: 'archived',
-    label: 'Archived',
-    description: 'A simple scheduling application for regional train lines across Manila, retired due to api endpoint deprecations.',
-  },
-];
-
-const toolbox = {
-  Mobile: ['Android', 'iOS', 'React Native', '.NET MAUI'],
-  Languages: ['Kotlin', 'Swift', 'TypeScript', 'C#', 'Java'],
-  Frontend: ['Next.js', 'React', 'HTML', 'CSS'],
-  Backend: ['Node.js', 'PHP', 'Firebase', 'REST', 'WordPress'],
-  Engineering: ['CI/CD', 'Testing', 'Debugging', 'Automation'],
-  AI: ['Code review', 'Prompt design', 'Debugging', 'Docs'],
-};
-
-const experienceItems = [
-  {
-    period: 'Current',
-    title: `${profile.role} · ${profile.employer}`,
-    summary: 'Working in the financial services industry with a focus on mobile product delivery, platform quality, and maintainable engineering practice.',
-  },
-  {
-    period: 'Foundation',
-    title: 'Systems and application engineering',
-    summary: 'Built a strong base in problem-solving, software delivery, and practical engineering strategy.',
-  },
-  {
-    period: 'Mobile focus',
-    title: 'Native and cross-platform app development',
-    summary: 'Delivered mobile solutions across app stability, feature work, product iteration, and platform modernization.',
-  },
-];
-
-const aiExamples = [
-  {
-    title: 'Code Generation',
-    description: 'Accelerating clean boilerplate structure setup.',
-  },
-  {
-    title: 'Refactoring Assistance',
-    description: 'Investigating optimization vectors for legacy code.',
-  },
-  {
-    title: 'Documentation',
-    description: 'Drafting robust architecture spec sheets.',
-  },
-  {
-    title: 'Testing Scaffolds',
-    description: 'Creating complex unit-test matrices.',
-  },
-];
-
-const processSteps = [
-  { label: 'Problem', detail: 'Identify bottleneck', icon: AlertTriangle },
-  { label: 'Investigate', detail: 'Root cause analysis', icon: Search },
-  { label: 'Solution', detail: 'Robust architecture', icon: Cpu },
-  { label: 'Result', detail: 'Scale with stability', icon: CheckCircle2 },
-];
+const { profile, hero, processSteps, work, approach, projects, toolbox, experience, ai, contact } = home;
 
 function SectionHeading({ eyebrow, title }: { eyebrow: string; title: string }) {
   return (
@@ -170,9 +39,9 @@ export default function HomePage() {
       <header className="topbar">
         <div className="brand">{profile.name}</div>
         <div className="header-meta">
-          <span className="accent">Senior Software Engineer</span>
+          <span className="accent">{profile.headerRole}</span>
           <span className="meta-dot" aria-hidden="true" />
-          <span>2026_Portfolio</span>
+          <span>{profile.headerTag}</span>
         </div>
       </header>
 
@@ -180,23 +49,26 @@ export default function HomePage() {
         <section className="hero section-card">
           <div className="hero-copy">
             <h1>
-              Mobile &amp; Cross-
-              <br />
-              Platform
+              {hero.titleLines.map((line, index) => (
+                <Fragment key={line}>
+                  {index > 0 && <br />}
+                  {line}
+                </Fragment>
+              ))}
             </h1>
-            <p className="tagline">Mobile engineer. Software builder. Problem solver.</p>
-            <p className="lede">I build, modernize, maintain and troubleshoot software across native mobile and cross-platform systems.</p>
+            <p className="tagline">{profile.tagline}</p>
+            <p className="lede">{hero.lede}</p>
             <div className="cta-row">
-              <a href="#work" className="button primary">Explore My Work</a>
-              <a href="/resume" className="button secondary">View Résumé</a>
+              <a href={hero.primaryCta.href} className="button primary">{hero.primaryCta.label}</a>
+              <a href={hero.secondaryCta.href} className="button secondary">{hero.secondaryCta.label}</a>
             </div>
           </div>
 
           <div className="hero-aside" aria-label="Technology summary">
             <div className="pill-panel">
-              <p className="mini-label">Core Stack</p>
+              <p className="mini-label">{hero.coreStackLabel}</p>
               <div className="pill-wrap">
-                {['Android', 'iOS', 'React Native', '.NET MAUI', 'React.js', 'Next.js'].map((item) => (
+                {hero.coreStack.map((item) => (
                   <span key={item} className="pill">
                     {item}
                   </span>
@@ -208,25 +80,28 @@ export default function HomePage() {
 
         <section className="process-flow section-card" aria-label="Engineering approach overview">
           <div className="process-track">
-            {processSteps.map(({ label, detail, icon: Icon }, index) => (
-              <Fragment key={label}>
-                <div className="process-step">
-                  <div className="step-icon" aria-hidden="true"><Icon size={18} strokeWidth={1.8} /></div>
-                  <div>
-                    <span>{label}</span>
-                    <small>{detail}</small>
+            {processSteps.map(({ label, detail, icon }, index) => {
+              const Icon = processIcons[icon];
+              return (
+                <Fragment key={label}>
+                  <div className="process-step">
+                    <div className="step-icon" aria-hidden="true"><Icon size={18} strokeWidth={1.8} /></div>
+                    <div>
+                      <span>{label}</span>
+                      <small>{detail}</small>
+                    </div>
                   </div>
-                </div>
-                {index < processSteps.length - 1 && <span className="process-connector" aria-hidden="true" />}
-              </Fragment>
-            ))}
+                  {index < processSteps.length - 1 && <span className="process-connector" aria-hidden="true" />}
+                </Fragment>
+              );
+            })}
           </div>
         </section>
 
         <section id="work" className="section-card">
-          <SectionHeading eyebrow="Selected Work" title="Selected Engineering Work" />
+          <SectionHeading eyebrow={work.eyebrow} title={work.title} />
           <div className="work-grid">
-            {workItems.map((item) => (
+            {work.items.map((item) => (
               <article key={item.title} className="work-card">
                 <div className="card-visual" aria-hidden="true">
                   <div className={`project-diagram project-diagram--${item.diagram}`}>
@@ -279,19 +154,15 @@ export default function HomePage() {
                   <p className="meta">{item.role}</p>
                   <p>{item.description}</p>
                 </div>
-                <span className="case-study-label">
-                  <span>Read case study</span>
-                  <ArrowRight size={13} strokeWidth={2.5} aria-hidden="true" />
-                </span>
               </article>
             ))}
           </div>
         </section>
 
         <section id="approach" className="section-card">
-          <SectionHeading eyebrow="Approach" title="How I Work" />
+          <SectionHeading eyebrow={approach.eyebrow} title={approach.title} />
           <div className="stage-grid">
-            {approachStages.map((stage, index) => (
+            {approach.stages.map((stage, index) => (
               <article key={stage.title} className="stage-card">
                 <span className="stage-index">0{index + 1}</span>
                 <h3>{stage.title}</h3>
@@ -302,31 +173,9 @@ export default function HomePage() {
         </section>
 
         <section className="section-card">
-          <SectionHeading eyebrow="Career" title="The Path So Far" />
-          <div className="story-grid">
-            <div>
-              <p>
-                The work centers on building reliable mobile experiences and practical engineering systems that make complex products easier to support, evolve, and scale over time. It blends native app development with cross-platform thinking and a strong focus on execution in business-critical environments.
-              </p>
-            </div>
-            <div className="timeline-stack">
-              {experienceItems.map((item) => (
-                <div key={item.title} className="timeline-row">
-                  <span>{item.period}</span>
-                  <div>
-                    <strong>{item.title}</strong>
-                    <p>{item.summary}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="section-card">
-          <SectionHeading eyebrow="Independent Projects // 05" title="Things I've Built" />
+          <SectionHeading eyebrow={projects.eyebrow} title={projects.title} />
           <div className="project-list">
-            {independentProjects.map((project) => (
+            {projects.items.map((project) => (
               <article key={project.name} className={`project-row project-row--${project.status}`}>
                 <div className="project-row-copy">
                   <div className="project-row-head">
@@ -342,11 +191,11 @@ export default function HomePage() {
         </section>
 
         <section className="section-card">
-          <SectionHeading eyebrow="Engineering Toolbox" title="Strong across mobile, platform, cloud and delivery systems." />
+          <SectionHeading eyebrow={toolbox.eyebrow} title={toolbox.title} />
           <div className="toolbox-grid">
-            {Object.entries(toolbox).map(([group, items]) => (
-              <div key={group} className="toolbox-group">
-                <h3>{group}</h3>
+            {toolbox.groups.map(({ name, items }) => (
+              <div key={name} className="toolbox-group">
+                <h3>{name}</h3>
                 <ul>
                   {items.map((item) => (
                     <li key={item}>{item}</li>
@@ -357,35 +206,47 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section id="experience" className="section-card">
-          <SectionHeading eyebrow="Experience" title="Leadership grounded in practical delivery." />
-          <div className="experience-list">
-            {experienceItems.map((item) => (
-              <div key={item.title} className="experience-row">
-                <span className="period">{item.period}</span>
-                <div>
-                  <h3>{item.title}</h3>
-                  <p>{item.summary}</p>
+        <section id="experience" className="section-card experience-section">
+          <SectionHeading eyebrow={experience.eyebrow} title={experience.title} />
+          <p className="experience-tenure">{experience.tenure}</p>
+          <p className="experience-journey">{experience.journey}</p>
+
+          <ol className="career-timeline">
+            {experience.career.map((item) => (
+              <li className="career-entry" key={item.company}>
+                <span className="career-period">{item.period}</span>
+                <div className="career-entry-content">
+                  <h3>{item.company}</h3>
+                  <p className="career-role">{item.role}</p>
+                  <p className="career-description">{item.description}</p>
                 </div>
-                <ArrowRight className="experience-row-icon" size={12} strokeWidth={2.5} aria-hidden="true" />
-              </div>
+              </li>
             ))}
-          </div>
+          </ol>
+
+          <section className="other-experience" aria-labelledby="other-experience-heading">
+            <h3 id="other-experience-heading">{experience.otherTitle}</h3>
+            <ul className="other-experience-list">
+              {experience.other.map((item) => (
+                <li key={item.title}>
+                  {item.period && <span className="career-period">{item.period}</span>}
+                  <h4>{item.title}</h4>
+                </li>
+              ))}
+            </ul>
+          </section>
         </section>
 
         <section id="ai" className="section-card ai-section">
-          <SectionHeading eyebrow="AI + Engineering // 08" title="Engineering With AI" />
+          <SectionHeading eyebrow={ai.eyebrow} title={ai.title} />
           <div className="ai-layout">
             <div className="ai-intro">
-              <p>
-                I treat artificial intelligence as a robust capability multiplier rather than a developer replacement. By adopting LLM-assisted workflows, I accelerate boilerplate scaffolding, speed up root-cause diagnostics, and generate technical documentation templates.
-              </p>
-              <p>
-                The priority always remains deterministic software architecture, rigorous manual review, and standard-compliant library integration.
-              </p>
+              {ai.intro.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
             </div>
             <ul className="ai-cards">
-              {aiExamples.map((item) => (
+              {ai.examples.map((item) => (
                 <li key={item.title}>
                   <article className="ai-card">
                     <span className="ai-card-icon" aria-hidden="true">
@@ -403,21 +264,19 @@ export default function HomePage() {
         </section>
 
         <section id="contact" className="section-card contact-card">
-          <SectionHeading eyebrow="Contact // 09" title="Let’s Work Together" />
-          <p className="contact-intro">
-            Open to senior mobile engineering roles and technical consulting opportunities. Let’s build stable systems.
-          </p>
+          <SectionHeading eyebrow={contact.eyebrow} title={contact.title} />
+          <p className="contact-intro">{contact.intro}</p>
           <div className="contact-links">
-            <a href="mailto:hello@jjgranados.dev">
+            <a href={`mailto:${contact.email}`}>
               <Mail size={18} aria-hidden="true" />
-              hello@jjgranados.dev
+              {contact.email}
             </a>
-            <a href="https://www.linkedin.com/in/jjsgranados/" target="_blank" rel="noreferrer">
-              linkedin.com/in/jjsgranados
+            <a href={contact.linkedin.href} target="_blank" rel="noreferrer">
+              {contact.linkedin.label}
             </a>
           </div>
-          <a className="button primary contact-resume" href="/resume">
-            View Résumé <ArrowUpRight size={16} aria-hidden="true" />
+          <a className="button primary contact-resume" href={hero.secondaryCta.href}>
+            {contact.resumeLabel} <ArrowUpRight size={16} aria-hidden="true" />
           </a>
         </section>
       </main>
@@ -425,29 +284,15 @@ export default function HomePage() {
       <footer className="site-footer">
         <div className="footer-identity">
           <strong>{profile.name}</strong>
-          <span>Mobile engineer. Software builder. Problem solver.</span>
+          <span>{profile.tagline}</span>
         </div>
         <nav className="footer-links" aria-label="Footer">
-          <a href="https://github.com/bobijovz" target="_blank" rel="noreferrer">GitHub</a>
-          <a href="https://www.linkedin.com/in/jjsgranados/" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a href="mailto:hello@jjgranados.dev">Email</a>
-          <span className="footer-year">2026</span>
+          <a href={contact.github} target="_blank" rel="noreferrer">GitHub</a>
+          <a href={contact.linkedin.href} target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href={`mailto:${contact.email}`}>Email</a>
+          <span className="footer-year">{contact.year}</span>
         </nav>
       </footer>
     </div>
   );
 }
-import {
-  AlertTriangle,
-  ArrowRight,
-  ArrowUpRight,
-  CheckCircle2,
-  Cpu,
-  ExternalLink,
-  Link2,
-  Mail,
-  RefreshCw,
-  Search,
-  Zap,
-} from 'lucide-react';
-import { Fragment } from 'react';
