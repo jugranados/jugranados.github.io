@@ -3,17 +3,19 @@ import type { Metadata } from 'next';
 
 const siteUrl = new URL('https://jugranados.github.io/');
 
+const title = 'June Jovi Granados | Senior Software Engineer, Mobile & Cross-Platform';
+const description =
+  'Senior Mobile Engineer with 12+ years building Android and cross-platform apps. Owned core modules of GCash and led a Xamarin-to-.NET MAUI migration.';
+
 export const metadata: Metadata = {
   metadataBase: siteUrl,
-  title: 'June Jovi Granados | Mobile Developer',
-  description:
-    'Mobile Developer based in Central Luzon, Philippines, with experience in native and cross-platform app development, product delivery, and financial services technology.',
+  title,
+  description,
   openGraph: {
     type: 'website',
-    title: 'June Jovi Granados | Mobile Developer',
-    description:
-      'Mobile Developer based in Central Luzon, Philippines, with experience in native and cross-platform app development, product delivery, and financial services technology.',
-    siteName: 'June Jovi Granados | Mobile Developer',
+    title,
+    description,
+    siteName: title,
   },
 };
 

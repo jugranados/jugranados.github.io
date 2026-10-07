@@ -59,6 +59,7 @@ export interface HomeContent {
     eyebrow: string;
     title: string;
     intro: string;
+    availability: string;
     email: string;
     linkedin: Cta;
     github: string;

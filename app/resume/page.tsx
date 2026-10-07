@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 
+const pdf = '/June-Jovi-Granados-Resume.pdf';
+
 export const metadata: Metadata = {
   title: 'Résumé | June Jovi Granados',
   alternates: {
@@ -9,16 +11,19 @@ export const metadata: Metadata = {
     title: 'Résumé | June Jovi Granados',
     url: '/resume/',
   },
+  robots: { index: false },
 };
 
+// Static export has no server redirects, so this page forwards to the PDF with a meta refresh.
 export default function ResumePage() {
   return (
     <main className="page-shell">
+      <meta httpEquiv="refresh" content={`0;url=${pdf}`} />
       <section className="section-card">
         <p className="eyebrow accent">Résumé</p>
-        <h1>Mobile Developer • Deloitte</h1>
+        <h1>Opening résumé…</h1>
         <p>
-          Experienced Mobile App Developer with a demonstrated history of working in the financial services industry. Skilled in Native iOS/Android, React Native, .NET MAUI, Firebase, PHP, WordPress, and Node.js. Strong engineering professional with a Bachelor&apos;s Degree in Information Technology from the Polytechnic University of the Philippines.
+          If the PDF does not open, <a href={pdf}>download the résumé</a>.
         </p>
       </section>
     </main>

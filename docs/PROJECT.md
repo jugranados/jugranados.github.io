@@ -38,7 +38,7 @@ Non-functional: static-first, minimal runtime dependencies, no unnecessary backe
 **V1 acceptance:** homepage and all four case studies are responsive, accessible, SEO-ready and free of fabricated professional claims.
 
 ## Current scope (verified against code, 2026-09-29)
-Built: homepage (all sections in DESIGN.md), `/about`, `/contact`, `/experience`, `/resume` (a text page, not a PDF), `sitemap.xml`, `robots.txt`, and GitHub Pages metadata for `https://jugranados.github.io/`.
+Built: homepage (all sections in DESIGN.md), `/about`, `/contact`, `/experience`, `/resume` (redirects to the PDF in `public/`), `sitemap.xml`, `robots.txt`, and GitHub Pages metadata for `https://jugranados.github.io/`.
 Not built: case-study pages/routes, content layer, analytics, structured data. See [ROADMAP.md](ROADMAP.md).
 
 ## Non-goals (V1)

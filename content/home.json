@@ -3,7 +3,7 @@
     "name": "June Jovi Granados",
     "headerRole": "Senior Software Engineer",
     "headerTag": "2026_Portfolio",
-    "tagline": "Mobile engineer. Software builder. Problem solver."
+    "tagline": "Building mobile. Modernizing software. Solving what matters."
   },
   "hero": {
     "titleLines": [
@@ -17,7 +17,7 @@
     },
     "secondaryCta": {
       "label": "View Résumé",
-      "href": "/resume"
+      "href": "/June-Jovi-Granados-Resume.pdf"
     },
     "coreStackLabel": "Core Stack",
     "coreStack": [
@@ -58,7 +58,7 @@
       {
         "title": "GCash — Architecture Modernization",
         "role": "Android Developer",
-        "description": "Worked on modernizing a large legacy Android application, moving from Java/RxJava-era patterns toward Kotlin and cleaner architecture to improve maintainability, testability, performance, and long-term development.",
+        "description": "Owned critical modules (Buy Load, Login, GCash KKB) of the GCash Android app, serving 50M+ users, in a team of 7 engineers. Migrated legacy Java components to Kotlin with Coroutines/RxJava and a cleaner architecture to improve testability, and helped reduce Firebase-reported crashes to below 1% through production debugging and stability work.",
         "diagram": "architecture"
       },
       {
@@ -76,7 +76,7 @@
       {
         "title": "Tara Tsek — Reusable Engineering / Library Design",
         "role": "Android Developer",
-        "description": "Created a reusable chart-generation library for a legacy Android health application, replacing manually implemented chart logic with a reusable component that was also applied to another application.",
+        "description": "Created a reusable chart-generation library for a legacy Android health application, replacing manually implemented chart logic with a reusable component that was also reused across 3 mobile applications.",
         "diagram": "library"
       }
     ]
@@ -152,10 +152,30 @@
     "title": "Deep in mobile engineering. Broad across software delivery.",
     "groups": [
       {
-        "name": "Mobile",
+        "name": "Languages",
         "items": [
-          "Android",
-          "iOS",
+          "Kotlin",
+          "Java",
+          "TypeScript",
+          "JavaScript",
+          "C#",
+          "Swift"
+        ]
+      },
+      {
+        "name": "Android & iOS",
+        "items": [
+          "Jetpack Compose",
+          "Coroutines",
+          "RxJava",
+          "Android SDK",
+          "Swift",
+          "Xcode"
+        ]
+      },
+      {
+        "name": "Cross-Platform",
+        "items": [
           "React Native",
           ".NET MAUI",
           "Xamarin",
@@ -163,83 +183,35 @@
         ]
       },
       {
-        "name": "Languages",
-        "items": [
-          "Kotlin",
-          "Java",
-          "Swift",
-          "C#",
-          "TypeScript",
-          "JavaScript",
-          "PHP",
-          "Ruby"
-        ]
-      },
-      {
-        "name": "Frontend",
+        "name": "Web & Backend",
         "items": [
           "React",
           "Next.js",
-          "AngularJS",
-          "HTML",
-          "CSS"
-        ]
-      },
-      {
-        "name": "Backend & Data",
-        "items": [
           "Node.js",
           "REST APIs",
-          "MySQL",
-          "MongoDB",
           "SQL",
-          "Firebase"
+          "MySQL",
+          "MongoDB"
         ]
       },
       {
-        "name": "Engineering",
+        "name": "CI/CD & Quality",
         "items": [
-          "CI/CD",
-          "Testing",
-          "Debugging",
-          "Code Review",
-          "Performance",
-          "Migration",
-          "SonarQube",
-          "Bitbucket"
+          "Bitrise",
+          "Fastlane",
+          "Azure DevOps",
+          "JUnit",
+          "Espresso"
         ]
       },
       {
-        "name": "Delivery & Tooling",
+        "name": "Tools",
         "items": [
+          "Git",
+          "Bitbucket",
           "Jira",
-          "Jira Service Management",
-          "Trello",
-          "Workflows",
-          "Automation",
-          "Dashboards",
-          "Acceptance Criteria",
-          "AWS"
-        ]
-      },
-      {
-        "name": "AI",
-        "items": [
           "GitHub Copilot",
-          "Claude",
-          "AI-assisted Research",
-          "AI-assisted Development",
-          "Code Review",
-          "Debugging",
-          "Testing",
-          "Documentation"
-        ]
-      },
-      {
-        "name": "Exploring",
-        "items": [
-          "Flutter", 
-          "GenAI"
+          "Claude Code"
         ]
       }
     ]
@@ -252,14 +224,14 @@
     "career": [
       {
         "period": "Current",
-        "company": "Deloitte",
+        "company": "DCPDC Inc.",
         "role": "Consultant",
         "description": "Mobile and frontend engineering, React/Next.js, AI-assisted development, and broader technical consulting capabilities."
       },
       {
         "period": "2021–2025",
         "company": "Ideagen",
-        "role": "Software Engineer",
+        "role": "Senior Mobile Engineer",
         "description": "Cross-platform mobile engineering across React Native, Xamarin and .NET MAUI, including migrations, dependency modernization, troubleshooting, code review, CI/CD, and Android/iOS releases."
       },
       {
@@ -295,7 +267,7 @@
       },
       {
         "period": "2013–2014",
-        "title": "Part-Time Programming Instructor",
+        "title": "I.T. Professor",
         "description": "Taught Java Programming, C# Programming, and Computer Hardware & Software Servicing for one academic year after college."
       }
     ]
@@ -330,13 +302,14 @@
     "eyebrow": "Contact",
     "title": "Let’s Work Together",
     "intro": "Open to senior mobile engineering roles and technical consulting opportunities. Let’s build stable systems.",
-    "email": "hello@jjgranados.dev",
+    "email": "junejovigranados@gmail.com",
     "linkedin": {
       "label": "linkedin.com/in/jjsgranados",
       "href": "https://www.linkedin.com/in/jjsgranados/"
     },
-    "github": "https://github.com/bobijovz",
+    "github": "https://github.com/jugranados",
     "resumeLabel": "View Résumé",
-    "year": "2026"
+    "year": "2026",
+    "availability": "Open to relocation, requires visa sponsorship."
   }
 }

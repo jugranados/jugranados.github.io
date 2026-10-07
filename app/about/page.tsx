@@ -16,12 +16,12 @@ export default function AboutPage() {
     <main className="page-shell">
       <section className="section-card">
         <p className="eyebrow accent">About</p>
-        <h1>Mobile developer focused on reliable product delivery.</h1>
+        <h1>Senior mobile engineer focused on reliable product delivery.</h1>
         <p>
-          I&apos;m June Jovi Granados, a Mobile Developer based in Central Luzon, Philippines. My work sits at the intersection of native and cross-platform engineering, product thinking, and practical delivery in business-critical environments.
+          I&apos;m June Jovi Granados, a Senior Mobile Engineer with 12+ years building and modernizing Android and cross-platform apps, based in Bataan, Philippines. I owned core modules of GCash, the Philippines&apos; largest e-wallet, and led a Xamarin-to-.NET MAUI migration at Ideagen.
         </p>
         <p>
-          I&apos;m currently working at Deloitte and have a background in mobile app development across Android, iOS, React Native, and .NET MAUI. My focus is on building experiences that are maintainable, useful, and ready for real-world scale.
+          I&apos;m currently a Consultant Mobile Developer at DCPDC Inc., integrating AI-assisted engineering workflows into development, debugging, testing, review, and documentation. My focus is on building apps that are maintainable, testable, and ready for real-world scale.
         </p>
       </section>
     </main>

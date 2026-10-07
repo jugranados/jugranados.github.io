@@ -1,6 +1,8 @@
 import { ArrowUpRight, Mail } from 'lucide-react';
-import Link from 'next/link';
 import type { Metadata } from 'next';
+import { home } from '@/content/home';
+
+const { contact, hero } = home;
 
 export const metadata: Metadata = {
   title: 'Contact | June Jovi Granados',
@@ -18,24 +20,23 @@ export default function ContactPage() {
     <main className="page-shell">
       <section className="section-card contact-card contact-page-card">
         <div className="section-heading">
-          <p className="eyebrow">Contact</p>
-          <h1>Let’s Work Together</h1>
+          <p className="eyebrow">{contact.eyebrow}</p>
+          <h1>{contact.title}</h1>
         </div>
-        <p className="contact-intro">
-          Open to senior mobile engineering roles and technical consulting opportunities. Let’s build stable systems.
-        </p>
+        <p className="contact-intro">{contact.intro}</p>
+        <p className="contact-availability">{contact.availability}</p>
         <div className="contact-links">
-          <a href="mailto:hello@jjgranados.dev">
+          <a href={`mailto:${contact.email}`}>
             <Mail size={18} aria-hidden="true" />
-            hello@jjgranados.dev
+            {contact.email}
           </a>
-          <a href="https://www.linkedin.com/in/jjsgranados/" target="_blank" rel="noreferrer">
-            linkedin.com/in/jjsgranados
+          <a href={contact.linkedin.href} target="_blank" rel="noreferrer">
+            {contact.linkedin.label}
           </a>
         </div>
-        <Link className="button primary contact-resume" href="/resume">
-          View Résumé <ArrowUpRight size={16} aria-hidden="true" />
-        </Link>
+        <a className="button primary contact-resume" href={hero.secondaryCta.href} target="_blank" rel="noreferrer">
+          {contact.resumeLabel} <ArrowUpRight size={16} aria-hidden="true" />
+        </a>
       </section>
     </main>
   );

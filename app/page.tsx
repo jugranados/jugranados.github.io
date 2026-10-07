@@ -71,7 +71,9 @@ export default function HomePage() {
             <p className="lede">{hero.lede}</p>
             <div className="cta-row">
               <Link href={hero.primaryCta.href} className="button primary">{hero.primaryCta.label}</Link>
-              <Link href={hero.secondaryCta.href} className="button secondary">{hero.secondaryCta.label}</Link>
+              <a href={hero.secondaryCta.href} className="button secondary" target="_blank" rel="noreferrer">
+                {hero.secondaryCta.label}
+              </a>
             </div>
           </div>
 
@@ -277,6 +279,7 @@ export default function HomePage() {
         <section id="contact" className="section-card contact-card">
           <SectionHeading eyebrow={contact.eyebrow} title={contact.title} />
           <p className="contact-intro">{contact.intro}</p>
+          <p className="contact-availability">{contact.availability}</p>
           <div className="contact-links">
             <a href={`mailto:${contact.email}`}>
               <Mail size={18} aria-hidden="true" />
@@ -286,9 +289,9 @@ export default function HomePage() {
               {contact.linkedin.label}
             </a>
           </div>
-          <Link className="button primary contact-resume" href={hero.secondaryCta.href}>
+          <a className="button primary contact-resume" href={hero.secondaryCta.href} target="_blank" rel="noreferrer">
             {contact.resumeLabel} <ArrowUpRight size={16} aria-hidden="true" />
-          </Link>
+          </a>
         </section>
       </main>
 

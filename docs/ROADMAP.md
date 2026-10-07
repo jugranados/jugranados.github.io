@@ -5,7 +5,7 @@ Active work only, each item verified as a gap against the code on 2026-09-29. Un
 ## Blocking a credible launch
 - **Case studies:** no `/work/[slug]` routes exist; work cards have non-navigating CTAs. Needs verified facts, role and disclosure approval for GCash, Xamarin → .NET MAUI, Damstra Learn, Tara Tsek before publishing (V1 acceptance).
 - **Verify published claims:** work-card roles ("Lead Mobile Architect", "Principal Migrations Consultant", "Core Library Architect"), the résumé line "Deloitte", and profile name ("June Jovi Granados" in metadata/About vs "JJ Granados" in docs). Confirm with the owner.
-- **Contact (FR-10):** no GitHub link and no email link on the site; `/resume` is a text page with no PDF and there is no `public/` directory.
+- **Contact (FR-10):** no GitHub link and no email link on the site; résumé PDF lives in `public/` and `/resume` redirects to it.
 
 ## Quality gaps
 - Add skip link; run an accessibility pass (keyboard, contrast, landmarks).

@@ -20,9 +20,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${siteUrl}/contact/`,
       lastModified: new Date(),
     },
-    {
-      url: `${siteUrl}/resume/`,
-      lastModified: new Date(),
-    },
   ];
 }

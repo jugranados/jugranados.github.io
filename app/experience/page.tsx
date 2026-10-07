@@ -16,12 +16,12 @@ export default function ExperiencePage() {
     <main className="page-shell">
       <section className="section-card">
         <p className="eyebrow accent">Experience</p>
-        <h1>Mobile developer working in financial services.</h1>
+        <h1>Senior mobile engineer across native and cross-platform apps.</h1>
         <ul className="ai-list">
-          <li>Mobile Developer at Deloitte</li>
-          <li>Mobile app development across native and cross-platform systems</li>
-          <li>Strength in Android, iOS, React Native, and .NET MAUI</li>
-          <li>Product-focused engineering with a practical maintenance mindset</li>
+          <li>Consultant Mobile Developer at DCPDC Inc. (2025–present)</li>
+          <li>Senior Mobile Engineer at Ideagen (2021–2025): React Native, .NET MAUI, Xamarin, Cordova, native Android and iOS</li>
+          <li>Android Developer at Mynt / GCash (2018–2021): core modules for a 50M+ user app</li>
+          <li>Earlier: ARKRAY, Tagcash and Imperium Technology (2014–2018)</li>
         </ul>
       </section>
     </main>
