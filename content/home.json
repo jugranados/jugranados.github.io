@@ -298,6 +298,13 @@
       }
     ]
   },
+  "about": {
+    "title": "Senior mobile engineer focused on reliable product delivery.",
+    "paragraphs": [
+      "I'm June Jovi Granados, a Senior Mobile Engineer with 12+ years building and modernizing Android and cross-platform apps, based in Bataan, Philippines. I owned core modules of GCash, the Philippines' largest e-wallet, and led a Xamarin-to-.NET MAUI migration at Ideagen.",
+      "I'm currently a Consultant Mobile Developer at DCPDC Inc., integrating AI-assisted engineering workflows into development, debugging, testing, review, and documentation. My focus is on building apps that are maintainable, testable, and ready for real-world scale."
+    ]
+  },
   "contact": {
     "eyebrow": "Contact",
     "title": "Let’s Work Together",

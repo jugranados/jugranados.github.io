@@ -55,6 +55,7 @@ export interface HomeContent {
     intro: string[];
     examples: { title: string; description: string }[];
   };
+  about: { title: string; paragraphs: string[] };
   contact: {
     eyebrow: string;
     title: string;

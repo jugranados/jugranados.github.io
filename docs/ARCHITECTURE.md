@@ -5,8 +5,8 @@ Static-first, content-driven site. No database, CMS, auth or backend in V1. Why:
 ## Current state (verified 2026-09-29)
 - Next.js 14.2.15 App Router, React 18, TypeScript (`strict`), `lucide-react` for icons. Plain CSS in `app/globals.css` with `:root` design tokens; no CSS framework.
 - `next.config.mjs`: `output: 'export'`, `trailingSlash: true`, `images.unoptimized: true`. Output goes to `out/`.
-- Layout at repo root, **no `src/`**: `app/layout.tsx`, `app/page.tsx` (homepage markup), `app/{about,contact,experience,resume}/page.tsx`, `app/sitemap.ts`, `app/robots.ts`, `app/icon.svg`. Path alias `@/*` → repo root.
-- **Homepage copy lives in `content/home.json`**, typed by `content/home.ts` (`HomeContent`) and imported by `app/page.tsx`. Icons and diagram visuals stay in code, referenced by key (`icon`, `diagram`). `public/` holds only the résumé PDF. No MDX, no `/work/[slug]` routes.
+- Layout at repo root, **no `src/`**: `app/layout.tsx`, `app/page.tsx` (homepage markup), `app/{about,contact,experience,resume}/page.tsx`, `app/sitemap.ts`, `app/robots.ts`, `app/icon.svg`, `app/fonts/` (self-hosted Geist). Shared components live in `components/` at the repo root (`SiteHeader`, `SiteFooter`, `ContactActions`, `NewTabLink`, `ProjectDiagram`). Path alias `@/*` → repo root.
+- **Page copy lives in `content/home.json`**, typed by `content/home.ts` (`HomeContent`) and imported by `app/page.tsx` and the `about`, `experience` and `contact` routes. Icons and diagram visuals stay in code, referenced by key (`icon`, `diagram`). `public/` holds the résumé PDF and the static Open Graph image `og-image.png` (extensionless generated images get a wrong content type on GitHub Pages). No MDX, no `/work/[slug]` routes.
 - All pages are Server Components; there is no `'use client'` and no state management.
 - External services: Google Fonts (`app/layout.tsx`); LinkedIn link. No analytics, no APIs.
 - `sitemap.ts` and `robots.ts` hardcode `https://example.com`. `layout.tsx` metadata has title/description only.
