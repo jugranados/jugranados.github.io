@@ -7,10 +7,12 @@ Source of truth for tokens and styles is `app/globals.css` (`:root` variables). 
 
 Avoid: neon/cyberpunk, heavy gradients, stock photos, generic developer illustrations, skill percentages, logo walls, fake terminal decoration, hover-only essential content, unsupported expertise claims, constant decorative motion, blocking load animations.
 
-Fonts: prefer locally available/system fonts (design spec for the homepage refinement: no new remote font request). Note the current code does load Google Fonts; see [ROADMAP.md](ROADMAP.md).
+Fonts: self-hosted at build time, no runtime request to Google. Space Grotesk via `next/font/google`; Geist (hero heading) via `next/font/local` from `app/fonts/` (SIL OFL, licence alongside). Both are exposed as `--font-space-grotesk` / `--font-geist`.
+
+Minimum text size is 12px for decorative diagram text and 13px for everything else. Links and buttons keep a 44px hit area; use padding or `min-height`, not visible size changes.
 
 ## Information architecture
-Nav: Work / Experience / About / Contact / Résumé. Routes: `/`, `/experience`, `/about`, `/contact`, `/resume` exist; `/work/[slug]` is planned.
+Nav (`components/SiteHeader.tsx`, a small client component rendered in `app/layout.tsx` with `SiteFooter` and a skip link): sticky 64px bar with a solid background and bottom border, no blur. Brand → `/`; Work / Approach / Experience → `/#work`, `/#approach`, `/#experience` (homepage sections, scroll-margin-top from `--header-height`); Contact is reached through the homepage `#contact` section and footer, not the nav; Résumé → `/resume` as the only bordered action. At ≤800px the links collapse into a disclosure menu (Escape and link click close it). The active homepage section is shown with `aria-current="location"` via IntersectionObserver; the hash is never rewritten. Routes: `/`, `/experience`, `/about`, `/contact`, `/resume` exist (the first three standalone pages are not in the nav); `/work/[slug]` is planned.
 
 Homepage section order (matches `app/page.tsx`): Hero → engineering-approach overview (four-step flow: Problem → Investigate → Solution → Result) → Selected Engineering Work (`#work`) → How I Work (`#approach`) → Things I've Built → Engineering Toolbox → Experience ("The Path So Far", `#experience`) → Engineering With AI (`#ai`) → Contact (`#contact`). The separate Career section is currently removed.
 

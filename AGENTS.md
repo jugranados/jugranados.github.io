@@ -9,7 +9,7 @@ Portfolio site for JJ Granados, Senior Software Engineer (Mobile & Cross-Platfor
 Next.js 14.2 App Router, React 18, TypeScript (strict), plain CSS, `lucide-react`. Static export (`output: 'export'`, `trailingSlash: true`, unoptimized images) deployed to GitHub Pages from `master`. Node >= 18 (CI uses 18). npm with `package-lock.json`.
 
 ## Layout
-- `app/` routes: `page.tsx` (homepage, content inline), `about`, `contact`, `experience`, `resume`, `sitemap.ts`, `robots.ts`, `layout.tsx`, `globals.css` (tokens + all styles). There is no `src/`, `public/`, MDX or `/work/[slug]` yet.
+- `app/` routes: `page.tsx` (homepage, content inline), `about`, `contact`, `experience`, `resume`, `sitemap.ts`, `robots.ts`, `layout.tsx` (fonts, sticky header and nav, footer, skip link), `globals.css` (tokens + all styles). `components/` shared components, `content/` typed copy, `public/` résumé PDF and OG image. There is no `src/`, MDX or `/work/[slug]` yet.
 - `docs/` deeper docs; `docs/archive/` history only.
 - `scripts/validate-frontmatter.js`, `lighthouseci/lhci.yml`, `.github/workflows/` CI.
 - Generated, never edit or commit: `out/`, `.next/`, `*.tsbuildinfo`.

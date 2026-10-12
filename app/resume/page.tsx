@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 // Static export has no server redirects, so this page forwards to the PDF with a meta refresh.
 export default function ResumePage() {
   return (
-    <main className="page-shell">
+    <main id="main" className="page-shell">
       <meta httpEquiv="refresh" content={`0;url=${pdf}`} />
       <section className="section-card">
         <p className="eyebrow accent">Résumé</p>
